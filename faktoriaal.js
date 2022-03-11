@@ -21,6 +21,5 @@ function factorial(r){
       return x;
     }  
   }
-  let r = 4;
-  x = factorial(r)
+  x = factorial(4);
   console.log(x);
