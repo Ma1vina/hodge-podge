@@ -1,19 +1,10 @@
-let y = 0;
-let arr = [3, 2, 1];
 
-for (let i = 0;  i < arr.length; i++){
- if (y > arr[i]){
-    } else { 
-        arr[0]= arr[i];
-    }
+function sortirovka(a, b) {
+  return a - b;
 }
-console.log(arr[0]);
-//
-let r = arr[0]; 
-for (let s = r; s < arr.length; s++){
-    if (r > arr[s]){
-    } else { 
-            arr[1] = arr[s];
-        }
-}
-console.log(arr[1]);
+
+let arr = [4, 2, 5, 1, 3];
+arr.sort(function(a, b) {
+  return a - b;
+});
+console.log(arr); // [1, 2, 3, 4, 5]
