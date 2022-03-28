@@ -7,5 +7,10 @@ let obj = {a: 1, b: 2, c: 3};
 let key = obj.a;
 console.log(key);
 
-let obj1 = {a: 1, b: 2, c: 3};
-console.log([obj1.length]);
+//Если переменная let больше 10, то выведите на экран слово 'верно', иначе выведите слово 'неверно'.
+let = 8;
+if( let > 10){
+    console.log("верно");
+}else{
+    console.log("неверно");
+}
