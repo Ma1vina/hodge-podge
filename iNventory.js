@@ -50,3 +50,48 @@ if (test1 == true) {
 } else {
 	console.log('неверно');
 }
+
+//CОКРАЩЕННЫЙ if
+// вместо if (test == true) можно написать просто if (test).
+let test2 = true;
+
+if (test2) { // эквивалентно if (test == true)
+	console.log('верно');
+} else {
+	console.log('неверно');
+}
+// в случае в неравенством (!test2)
+
+// Аналогично для  false. Условие test == false на самом деле все равно, что test != true.
+
+let test4 = 3 * 'abc';
+
+if (test4) {
+	console.log('верно');
+} else {
+	console.log('неверно');//+
+
+}
+
+let test5 = '0';
+if (test5) {
+	console.log('верно');//+
+} else {
+	console.log('неверно');
+}
+
+
+//СОКРАЩЕНИЕ ФИГУРНЫХ СКОБОК (если выражение одно)
+let test0 = 0;
+if (test0 == 0) {
+	console.log('верно');     //+
+} else {
+	console.log('неверно!');
+}
+// ИЛИ
+if (test0 == 0) console.log('верно'); else console.log('неверно!');
+//ИЛИ
+if (test0 == 0)
+console.log('верно');
+else
+console.log('неверно!');
