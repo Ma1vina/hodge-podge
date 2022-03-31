@@ -40,19 +40,20 @@ if (num >= 0) {
 	alert('меньше нуля');
 }
 
-//Задачка:
-let x = 999;
-let summ = 0;
-if(x>=10 && x<=99){
-    console.log("попадает в диапазаон от 10 до 99")
-} else {
-  let arr = Array.from(x); //  - не знаю как создать новый массив из имеющихся чисел
-   for(i = 0; i < arr.length; i++){
-  summ = summ + arr[i]
-   }
- if( summ <= 9){
-      console.log("сумма цифр однозначна");
- } else {
-     console.log("сумма цифр двузначна");
- }
-   }
+// //Задачка:
+// let x = 999;
+// let summ = 0;
+// if(x>=10 && x<=99){
+//     console.log("попадает в диапазаон от 10 до 99")
+// } else {
+//   let arr = Array.from(x); //  - не знаю как создать новый массив из имеющихся чисел
+//    for(i = 0; i < arr.length; i++){
+//   summ = summ + arr[i]
+//    }
+//  if( summ <= 9){
+//       console.log("сумма цифр однозначна");
+//  } else {
+//      console.log("сумма цифр двузначна");
+//  }
+//    }
+
