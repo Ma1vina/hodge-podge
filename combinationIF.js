@@ -40,20 +40,17 @@ if (num >= 0) {
 	console.log('меньше нуля');
 }
 
+
 //задачка попытка 2
 let x = 77;
-let str;
-let summ;
-let w;
-let p;
 if(!(x>=10 && x<=99)){ // НЕ в этом диапазоне
     console.log("не входит в диапазон")
 } else { // в др случае, если входит в этот диапазон
     let str = String(x); // перевести в строку
-    z = str.split(""); // разбить на массив
-    w = Number(z[0]); // перевести индексы в цифры
-    p = Number(z[1]);
-summ = w + p; // подсчитать сумму
+    let z = str.split(""); // разбить на массив
+    let w = Number(z[0]); // перевести индексы в цифры
+    let p = Number(z[1]);
+ let summ = w + p; // подсчитать сумму
 if(summ <=9){
     console.log(summ + " сумма цифр однозначна")
 } else {
