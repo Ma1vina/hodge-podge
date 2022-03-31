@@ -34,10 +34,10 @@ if (num >= 0) {
 	if (num <= 5) {
 		console.log('меньше или равно 5');
 	} else {
-		alert('больше 5');
+		console.log('больше 5');
 	}
 } else {
-	alert('меньше нуля');
+	console.log('меньше нуля');
 }
 
 // //Задачка:
@@ -57,3 +57,32 @@ if (num >= 0) {
 //  }
 //    }
 
+
+//задачка попытка 2
+let x = 77;
+let str;
+let summ;
+let w;
+let p;
+if(!(x>=10 && x<=99)){ // НЕ в этом диапазоне
+    console.log("не входит в диапазон")
+} else { // в др случае, если входит в этот диапазон
+    let str = String(x); // перевести в строку
+    z = str.split(""); // разбить на массив
+    w = Number(z[0]); // перевести индексы в цифры
+    p = Number(z[1]);
+summ = w + p; // подсчитать сумму
+if(summ <=9){
+    console.log(summ + " сумма цифр однозначна")
+} else {
+    console.log(summ + " сумма цифр двузначна")
+ }
+}
+
+// посчитать сумму цифр 10
+// let i = 10;
+// let c = String(i);
+// let o = Number(c[0]);
+// let v = Number(c[1]);
+// let s = o+v;
+// console.log(s);
