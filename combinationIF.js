@@ -59,30 +59,41 @@ if(summ <=9){
 }
 
 //посчитать сумму цифр 10
-let i = 10;
-let c = String(i);
-let o = Number(c[0]);
-let v = Number(c[1]);
-let s = o+v;
-console.log(s);
+// let i = 10;
+// let c = String(i);
+// let o = Number(c[0]);
+// let v = Number(c[1]);
+// let s = o+v;
+// console.log(s);
 
 //Задачка аналогичная, только для чисел, которые не входят в диапазон от 10 до 99
 let q = 999;
-let summ1=0;
+let summ2 = 0;
+let c = String(q);
 if(q>=10 && q<=99){ // в этом диапазоне
     console.log("входит в диапазон")
 } else {
-    let string = String(q)
-    let arrD = string.split("")
-    for(i = 0; i < arrD.length; i++){
-        let k = arrD[i]
-         summ1 = summ1 + k // cтрока !!!
+    for(let i = 0; i < c.length; i++){
+         summ2 = summ2 + Number(c[i])
     } 
-    if(summ1 <= 9){
-      console.log(summ1 + " сумма цифр однозначна")  
-    }else if( summ1 <=10 && summ1 <=99){
-        console.log(summ1 + " cумма цифр двузначна")
-    }else if(summ1> 99){
-    console.log(summ1)
+    if(summ2 <= 9){
+      console.log(summ2 + " сумма цифр однозначна")  
+    }else if( summ2 <=10 && summ2 <=99){
+        console.log(summ2 + " cумма цифр двузначна")
+    }else if(summ2> 99){
+    console.log(summ2)
     }
 } 
+//Задачка 7
+	//Дано трехзначное число. Найдите сумму цифр этого числа.
+// 	let f = 999;
+// 	let summ1 = 0;
+//     let r1 = String(f);
+// for( let i = 0; i < r1.length; i++){
+// 	summ1 = summ1 + Number(r1[i]);
+// }
+// if(summ1 <=9){
+// 	console.log("однознач " + summ1)
+// }else{
+// 	console.log("двузнач"+ summ1)
+// }
