@@ -99,14 +99,6 @@ if(summ1 <=9){
 	console.log("двузнач"+ summ1)
 }
 
-// function digitSum(y) {
-// 	let sum = 0, x = String(y); 
-// 	for (let i = 0; i < x.length; i++) {
-// 		sum = sum + Number(x[i]);
-// 	}
-// 	return(sum)
-// }
-
 //Задачка аналогичная, только для чисел, которые не входят в диапазон от 10 до 99
 let q = 999;
 let summ2 = 0;
