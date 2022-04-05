@@ -117,3 +117,23 @@ if(q>=10 && q<=99){ // в этом диапазоне
     console.log(summ2)
     }
 } 
+
+//задачка 8
+//Дано число из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. 
+//Если это так - выведите 'да', в противном случае выведите 'нет'.
+let numbb = 111111;
+let string = String(numbb);
+let arr11 =string.split('');
+let summ11 =Number(arr11[0])+Number(arr11[1])+Number(arr11[2])
+let summ22 =Number(arr11[3])+Number(arr11[4])+Number(arr11[5])
+if(summ11===summ22){
+    console.log("yes")
+}else{
+    console.log("no")
+}
+
+
+
+
+
+
