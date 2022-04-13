@@ -112,3 +112,9 @@
 // let arr = ['a', 'b', 'c', 'd', 'e'];
 // Создайте из этого массива следующий объект:
 // let arr = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+let arr = ['a', 'b', 'c', 'd', 'e'];
+let obj = {};
+for (let i = 0, j =1; i < arr.length; i++, j++){
+obj[j] = arr[i]; // obj[j] - ключ(число цикла), arr[i] - значение
+}
+console.log(obj);
