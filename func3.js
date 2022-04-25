@@ -113,20 +113,78 @@
 
 
 //Задачка 9.С помощью приведенной функции getDigitsSum найдите все года от 1 до 2030, сумма цифр которых равна 13.
-let result;
-for(let i = 1; i<=2030;i++){
-    if(getDigitsSum(i) == 13){
-        result = i;
-}
-}
-console.log(result);
+// let result;
+// for(let i = 1; i<=2030;i++){
+//     if(getDigitsSum(i) == 13){
+//         result = i;
+// }
+// }
+// console.log(result);
 
-function getDigitsSum(num) {
-	let sum = 0;
-	let digits = String(num).split('');
+// function getDigitsSum(num) {
+// 	let sum = 0;
+// 	let digits = String(num).split('');
 	
-	for (let digit of digits) {
-		sum += Number(digit);
-	}
-	return sum;
+// 	for (let digit of digits) {
+// 		sum += Number(digit);
+// 	}
+// 	return sum;
+// }
+
+//let nums = [123, 456, 789];
+
+//Задача 10. Есть массив [123, 456, 789]
+//Сделать так, чтобы цифры в каждом элементе массива были в обратном порядке.
+// То есть из нашего массива сделаем следующий:
+//[321, 654, 987]
+// Некий программист уже написал код, реализующий описанную задачу:
+// let nums = [123, 456, 789]; 
+// let result = []; 
+// for (let num of nums) {
+//      result.push(String(num).split('').reverse().join(''));
+//      }
+//       console.log(result); // выведет [321, 654, 987]
+
+// function ReversNum(num){
+//     return String(num).split('').reverse().join('');
+//     }
+//     let nums = [123, 456, 789];
+//     let result = [];
+//     for (let num of nums) {
+//     result.push(ReversNum(num));
+//     }
+//     console.log(result);
+
+//Задача 11.Необходимо проверить, равна ли сумма цифр первого числа сумме цифр второго числа.
+// let num1 = 234;
+// let num2 = 531;
+
+// function CheckSummNumb (numb){
+//     let summ = 0;
+//     let arr = String(numb).split('');
+//     for(let i = 0; i<arr.length;i++){
+//      summ = summ + Number(arr[i]);
+//     }
+//     return summ;
+// }
+//   if(CheckSummNumb(num1) == CheckSummNumb(num2)){
+//       console.log("суммы равны");
+//   }else{
+//       console.log("не равны");
+//   }
+
+//Задача 12.Дан массив с числами. Необходимо перебрать этот массив с числами и вывести в консоль нетривиальные
+//делители этих чисел (то есть исключая число 1 и само число). Некий программист уже написал решение задачи:
+let nums = [12, 24, 35, 14];
+
+function SortDivisors (num){
+    let arr =  [];
+    for(let i =2; i < num; i++){
+        if(i % 2 == 0){
+          arr.push(i);
+        }
+    }
+    return arr;
 }
+console.log(SortDivisors(nums));
+
