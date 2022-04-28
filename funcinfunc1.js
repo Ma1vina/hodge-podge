@@ -43,7 +43,7 @@
 // console.log(getPerfect(1,10000));
 
 //Пересечение массивов:
-//вывести вновый массив одинаковые числа массивов
+//ЗАДАЧА 1.вывести вновый массив одинаковые числа массивов
 // function inArray(elem, arr) {
 // 	if (arr.indexOf(elem) == -1) {
 // 		return false;
@@ -70,7 +70,7 @@
 
 // console.log( getInt([1, 2, 3], [2, 3, 4, 5]) );
 	
-//Разность массивов,если в массиве есть эелементы которые не одинаковы - вывести в новый массив
+//ЗАДАЧА 2.Разность массивов,если в массиве есть эелементы которые не одинаковы - вывести в новый массив
 // function getDiff(arr1, arr2) {
 // 	let result = [];
 	
@@ -95,45 +95,71 @@
 
 
 
-//Найти общие делители 12 и 18
-function getDivisors (num){
-    let arr = [];
-    for(let i = 0; i<=num;i++){
-        if(num% i ==0){
-            arr.push(i)
-        }
-    }
-    return arr;
-}
-function compare(num1,num2){
-    let arr1 = (getDivisors(num1));
-    let arr2 = (getDivisors(num2));
-    let arr = [];
-    for(let elem of arr1){
-        if(inArrayelem(elem,arr2)){ // ОБЩИЕ ДЕЛИТЕЛИ
-            arr.push(elem)
-        }
-        }
-        return arr;// теперь в массиве общие делители
-    }
-    function inArrayelem(elem,arr){
-        if(arr.indexOf(elem) !== -1){
-            return true
-        }else{
-            return false
-        }
-    } // перебрать элементы в двух массивах относительно друг друга
+// //ЗАДАЧА 3.Найти общие делители 12 и 18 
+// function getDivisors (num){  // ---- arr1 и arr2 делителей
+//     let arr = [];
+//     for(let i = 0; i<=num;i++){
+//         if(num% i ==0){
+//             arr.push(i)
+//         }
+//     } 
+//     return arr;  
+// }
+// function compare(arr1,arr2){
+//     let arr = [];
+//      for(let i=0; i<arr1.length; i++){
+//          for(let j=0; j<arr2.length; j++){
+//              if(arr1[i] == arr2[j]){
+//                  arr.push(arr1[i])
+//              }
+//          }
+//      }
+//      return arr; //arr общих делителей
+//     }
+    
+//   //теперь найдем наибольший делитель из arr oбщих делителей  (compare(num1,num2))
+//   function getBigDivisor (num1,num2){
+//       let arrCompare = [];
+//        let arr1 = getDivisors(num1); //масс делителей+
+//        let arr2 = getDivisors(num2); //масс делителей=
+//        arrCompare = compare(arr1,arr2); // =общий делитель
+//        let max = Math.max.apply(null,arrCompare) //наибольш.делитель
+//    return max;
+//   }
+//   console.log(getBigDivisor(12,18));
 
-    console.log(compare([1,2,3],[2,3]));
+//ЗАДАЧА 4. Напишите функцию, которая параметрами будет принимать два числа и проверять - взаимно простые они или нет.
+// function getSimpleDigit (num1,num2){
+//     let arrCompare = [];
+//         let arr1 = getDivider(num1); //масс делителей+
+//         let arr2 = getDivider(num2); //масс делителей=
+//         arrCompare = compareArrDivisors(arr1,arr2); // =общий делитель
+//         let max = Math.max.apply(null,arrCompare);//наибольш.делитель
+//         return max == 1;
+//         } 
+   
+// console.log(getSimpleDigit(14,25));
 
-    //общие делители нашли, теперь найти из них наиобльший( 12 и 18 числа):
-     function bigDivisors (num1,num2){
-         let arr = []
-         let x = compare(num1)
-         let y = compare(num2)
-      arr = (x,y)
-      let max = Math.max.apply(null,arr);
-      return max;
-     }
-      
-console.log(bigDivisors(12,18));
+// function getDivider (num){ //найду делители числа
+//     let arr = [];
+//     for(let i = 0; i<num;i++){
+//         if(num% i == 0){
+//             arr.push(i)
+//         }
+//     }
+//     return arr;
+// }
+
+// function compareArrDivisors (arr1,arr2){
+//     let arr = [];
+//     for(let i =0; i< arr1.length; i++){
+//         for(let j =0; j< arr2.length;j++){
+//          if(arr1[i] == arr2[j]){
+//          arr.push(arr1[i]);
+//         }
+//     }
+// }
+// return arr; // вывели массив с общими делителями
+// }
+
+
