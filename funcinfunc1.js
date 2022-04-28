@@ -162,4 +162,59 @@
 // return arr; // вывели массив с общими делителями
 // }
 
+//ЗАДАЧА 5..Случайное число массива
+// let arrArr = [6,1,5,2,6];
+// function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min; //cлучайное число (базовая функция)
+// }
 
+// function random (arr){
+//     return arr[getRandomInt(0, arr.length -1)]; 
+// }
+// console.log(random(arrArr));
+
+// //ЗАДАЧА 6. Используя созданную функцию, найдите сумму трех случайных элементов из массива.
+//  console.log(random(arrArr)+random(arrArr)+random(arrArr));
+
+
+ //ЗАДАЧА 7. Перемешивание массива.
+// let arr = [1,2,3,4,5];
+
+//  function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min;//получить случайное число
+// }
+
+// function shuffle (arr){
+//     let newArr = [];
+//     while(arr.length>0){ // пока длина больше 0 (длина уменьшается при вырезании-splice)
+//     let elemRand = getRandomInt(0, arr.length -1) //случайное число от 0 до последнего элемента массива
+//     let elems = arr.splice(elemRand,1)[0]; //вырезать элемент (случайный, 1) и вставить arr[0]
+//     newArr.push(elems)
+//     }
+//     return newArr;
+// }
+// console.log(shuffle(arr));
+
+//ЗАДАЧА 8. Сделайте функцию range принимающую параметрами 2 целых числа - начало и конец диапазона, и
+// возвращающую массив, заполненный целыми перемешанными числами из этого диапазона.
+
+//  function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min;//получить случайное число
+// }
+// function inRangeGetMassShuffle (num1,num2){
+//     let arr = [];
+//     let newArr = [];
+//     for(let i = num1; i<=num2;i++){ //
+//         arr.push(i);
+//     }
+//     while(arr.length>0){
+//         let elemRand = getRandomInt(0, arr.length -1)
+//         let elems = arr.splice(elemRand,1)[0]; 
+//         newArr.push(elems)
+//     }
+//     return newArr; 
+// }
+// console.log(inRangeGetMassShuffle(10,20));
+
+//ЗАДАЧА 9. Вернуть 3 случайных элемента из масива(в новом массиве), должно выводиться каждый раз разные 3 элем.
+let arr = [1, 2, 3, 4, 5];
