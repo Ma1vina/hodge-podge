@@ -84,89 +84,95 @@
 // Сделайте функцию getFirst, которая параметром будет принимать число цифр в билете и возвращать число,
 // соответствующее началу цикла. Потестируйте эту функцию на различных значениях.
 
-function getFirst(num){
-    let str = '1';
-    let count = (num / 2 + 1) - 2;
-    for (let i = 1; i <= count; i++){
-    str = str + '0';
-    }return Number(str + '1');
-    }
-    console.log( getFirst(8) );  
+// function getFirst(num){
+//     let str = '1';
+//     let count = (num / 2 + 1) - 2;
+//     for (let i = 1; i <= count; i++){
+//     str = str + '0';
+//     }return Number(str + '1');
+//     }
+//     console.log( getFirst(8) );  
 
 
 
-    function getLuckyTickets(digitsAmount) {
-        let result = [];
+//     function getLuckyTickets(digitsAmount) {
+//         let result = [];
         
-        let first = getFirst(digitsAmount);
-        let last  = getLast(digitsAmount);
+//         let first = getFirst(digitsAmount);
+//         let last  = getLast(digitsAmount);
         
-        for (let i = first; i <= last; i++) {
-            let ticketNum = normalizeNum(i, digitsAmount);
+//         for (let i = first; i <= last; i++) {
+//             let ticketNum = normalizeNum(i, digitsAmount);
             
-            if (isLucky(ticketNum)) {
-                result.push(ticketNum);
-            }
-        }
+//             if (isLucky(ticketNum)) {
+//                 result.push(ticketNum);
+//             }
+//         }
         
-        return result;
-    }
+//         return result;
+//     }
 
-    // Соберите весь код вместе, запустите его. Потестируйте общую работу кода для билетов с различным количеством цифр.
+//     // Соберите весь код вместе, запустите его. Потестируйте общую работу кода для билетов с различным количеством цифр.
 
-    function isLucky(num){
-let a = String(num);
-let sum1 = 0;
-let sum2 = 0;
-for( let i = 0 ; i < a.length / 2 ; i ++){
-sum1 += Number(a[i]);
-}
-for( let i = a.length / 2 ; i < a.length ; i ++){
-sum2 += Number(a[i]);
-}
-return sum1 == sum2;
-}
+//     function isLucky(num){
+// let a = String(num);
+// let sum1 = 0;
+// let sum2 = 0;
+// for( let i = 0 ; i < a.length / 2 ; i ++){
+// sum1 += Number(a[i]);
+// }
+// for( let i = a.length / 2 ; i < a.length ; i ++){
+// sum2 += Number(a[i]);
+// }
+// return sum1 == sum2;
+// }
 
-function formStr(data, length){
-let str = '';
-for(let i = 1; i <= length; i++){
-str += data;
-}return str;
-}
+// function formStr(data, length){
+// let str = '';
+// for(let i = 1; i <= length; i++){
+// str += data;
+// }return str;
+// }
 
-function getLast(num){
-let str = '';
-for(let i = 1; i <= num; i++){
-str += '9';
+// function getLast(num){
+// let str = '';
+// for(let i = 1; i <= num; i++){
+// str += '9';
 
-} return Number(str);
-}
+// } return Number(str);
+// }
 
-function getFirst(num){
-let str = '1';
-let countZ = (num / 2 + 1) - 2;
-for (let i = 1; i <= countZ; i++){
-str += '0';
-}return Number(str + '1');
-}
-function normalizeNum(num, digitsAmount) {
-let str = String(num);
-return formStr('0', digitsAmount - str.length) + str;
-}
+// function getFirst(num){
+// let str = '1';
+// let countZ = (num / 2 + 1) - 2;
+// for (let i = 1; i <= countZ; i++){
+// str += '0';
+// }return Number(str + '1');
+// }
+// function normalizeNum(num, digitsAmount) {
+// let str = String(num);
+// return formStr('0', digitsAmount - str.length) + str;
+// }
 
-function getLuckyTickets(num){
+// function getLuckyTickets(num){
 
-let result = [];
-for(let i = getFirst(num); i <= getLast(num); i++){
+// let result = [];
+// for(let i = getFirst(num); i <= getLast(num); i++){
 
-if(isLucky(normalizeNum(i, num))){
-result.push(i);
-}
-}
-return result;
-}
+// if(isLucky(normalizeNum(i, num))){
+// result.push(i);
+// }
+// }
+// return result;
+// }
 
-console.log( getLuckyTickets(6) );
+// console.log( getLuckyTickets(6) );
+
+
+
+
+
+
 
 
 
