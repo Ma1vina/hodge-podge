@@ -13,13 +13,15 @@
 // 	return result;
 // }
 
-// console.log(each(arr, function(str){ 
+// function getStrBack(str){ 
 //     let result = '';
 //      for(let i = str.length - 1; i >= 0 ; i--){
 //          result = result + str[i]
 //         }
 //           return result;
-//         }));
+//         };
+
+//         console.log(each(arr, getStrBack));
 
 //////////////////////////////////////////////
 // let result = each([1, 2, 3, 4, 5], function(num) {
