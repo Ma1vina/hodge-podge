@@ -11,7 +11,9 @@
 //  }
 // }
 // };
-// console.log(getElem(arr));
+// getElem(arr);
+
+
 
 //сумма элементов
 // function getSum(arr) {
@@ -27,6 +29,8 @@
 // console.log(getSum([1, 2, 3]));
 
 
+
+
 //С помощью рекурсии найдите сумму квадратов элементов этого массива.
  let arr = [2, 2, 3, 4, 5];
 
@@ -38,11 +42,8 @@ function getSum(arr) {
 	
 	return sum;
 }
-    function getSquare (arr){
-        let sum = 0;
-        for(let elem of arr){
-        sum = elem*elem
-        }
-        return sum;
+    function getSquare (num){
+        return num*num;
      }
- console.log(getSum([1,3]));
+
+     console.log(getSum(arr));
