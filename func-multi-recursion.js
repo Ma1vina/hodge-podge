@@ -1,3 +1,5 @@
+"use strict"
+
 //Вывести на экран все примитивы в массиве:
 // let arr = [
 // 	1,
@@ -91,22 +93,91 @@
 //  f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}}
 // С помощью рекурсии найдите сумму элементов этого объекта.
 
-let obj = {a: 1,
-      b: {c: 2, d: 3, e: 4},
-      f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
+// let obj = {a: 1,
+//       b: {c: 2, d: 3, e: 4},
+//       f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}};
 
-function getSum (objj){
-    let sum = 0;
-    for(let key in objj){
-        if(typeof objj[key] == "object"){
-            sum = sum + getSum(objj[key])
-        }else{
-            sum = sum +objj[key]
-        }
-    }
-return sum;
-}
-console.log(getSum(obj));
+// function getSum (objj){
+//     let sum = 0;
+//     for(let key in objj){
+//         if(typeof objj[key] == "object"){
+//             sum = sum + getSum(objj[key])
+//         }else{
+//             sum = sum +objj[key]
+//         }
+//     }
+// return sum;
+// }
+// console.log(getSum(obj));
+
+
+// Задача 4. Дан многомерный массив произвольного уровня вложенности, содержащий внутри себя строки, например, такой:
+//let arr = ['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]];
+// С помощью рекурсии слейте элементы этого массива в одну строку:
+// 'abcdefgjk'
+
+// function arrStr(arr){
+// let str = "";
+// for(let elem of arr){
+// if(typeof elem == 'object'){
+//         str = str + arrStr(elem)
+//     }else{
+//         str = str + elem;
+//     }
+// }
+// return str;
+// }
+
+// console.log(arrStr(arr));
+
+//ИЛИ:  
+
+    //     function sortMass (multiArr){
+    //         let str = "";
+    //     for(let i=0; i<multiArr.length;i++){
+    //         if (typeof multiArr[i] == 'object') {
+    //             let y =sortMass(multiArr[i])
+    //             str = str + y
+    //     }else{
+    //     str = str + multiArr[i]
+    //     }
+    //     }
+    //     return str;
+    // }
+    // console.log(sortMass(arr));
+
+
+    //ЗАДАЧА. Прибавим к каждому элементу "!":
+    // function func(arr) {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (typeof arr[i] == 'object') {
+    //             arr[i] = func(arr[i]);
+    //         } else {
+    //             arr[i] = arr[i] + '!';
+    //         }
+    //     }
+        
+    //     return arr;
+    // }
+    // console.log(func([1, [2, 7, 8], [3, 4, [5, 6]]]));
+
+//Задача. Дан многомерный массив произвольного уровня вложенности, например, такой:
+// let arr = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+//Возведите все элементы-числа этого массива в квадрат.
+
+// function getSquareElemOfArr (arrs){
+//     for(let i=0; i<arrs.length; i++){
+//         if (typeof arrs[i] == 'object') {
+//             arrs[i] = getSquareElemOfArr(arrs[i])
+//     }else{
+//     arrs[i] = arrs[i]**2
+//     }
+// }
+// return arrs
+// }
+// console.log(getSquareElemOfArr(arr));
+
+
 
 
 
