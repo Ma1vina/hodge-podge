@@ -1,0 +1,48 @@
+ html {
+        background-image: url(image/11.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      body {
+          font-weight: normal;
+      }
+
+      .avatar {
+        width: 200px;
+        border-radius: 20px;
+        border: 1px solid rgb(253, 253, 253);
+        box-shadow: 3px 3px 5px rgb(90, 127, 148);
+      }
+     
+      .info p {
+       color: rgba(255, 255, 255, 0.76);
+       margin: 0;
+       font-style: italic;
+       text-decoration: none;
+       /* text-transform: uppercase; */
+       /* letter-spacing: 5px; */
+       /* word-spacing: 10px; */
+      }
+
+     .container {
+         max-width: 1300px;
+         margin: auto;
+     }
+
+     .social {
+       margin: 0px;
+       padding: 0px 10px; 
+       border-radius: 10px;
+       border: 1px solid rgb(253, 253, 253);
+       box-shadow: 3px 3px 5px rgb(171, 219, 221);
+       
+     } 
+
+     .inSotialBlock {
+         margin: 0;
+     }
