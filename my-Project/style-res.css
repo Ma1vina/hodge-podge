@@ -1,187 +1,378 @@
- html {
-        background-image: url(image/11.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
+html {
+    background-image: url(image/11.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-      body {
-          font-weight: normal;
-      }
+  body {
+      font-weight: normal;
+      margin: auto;
+  }
 
-     
-      .avatar {
-        width: 200px;
-        border-radius: 20px;
-        border: 1px solid rgb(253, 253, 253);
-        box-shadow: 3px 3px 5px rgb(90, 127, 148);
-      }
+  .container {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-      h1 {
-        color: rgba(255, 255, 255, 0.76);
-      }
-     
-      .info p {
-       color: rgba(255, 255, 255, 0.76);
-       margin: 0;
-       font-style: italic;
-       text-decoration: none;
-       /* text-transform: uppercase; */
-       /* letter-spacing: 5px; */
-       /* word-spacing: 10px; */
-      }
 
-     .container {
-         max-width: 1300px;
-         margin: auto;
-     }
+hr {
+    width: 98%;
+     color: #fff;
+     height: 1px;
+      border: 1px solid rgb(253, 253, 253);
+      border-bottom-width: 0;
+      opacity: 90%;
+    }
 
-     .social {
-       margin: 0px; 
-       border-radius: 10px;
-       border: 1px solid rgb(253, 253, 253);
-       box-shadow: 3px 3px 5px rgb(171, 219, 221);
-       
-     } 
+  .avatar {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow: 3px 3px 5px rgb(90, 127, 148);
+    margin-bottom: 10px;
+    margin-right: 5px;
+  }
 
-     a{
-      color: rgba(255, 255, 255, 0.76);
+  #AboutMe {
       text-decoration: none;
-    }
+      color: rgba(255, 255, 255, 0.76);
+      margin: 0;
+      font-style: italic;
+      font-size: 16px;
 
-    a:hover {
-      color:rgb(38, 95, 253);
-      text-decoration: underline;
-    }
+  }
 
-    a:active {
-      color:rgb(38, 95, 253);
-    }
+  h1 {
+    color: rgba(255, 255, 255, 0.76);
+  }
+ 
+.info-text {
+ margin-left: 30px;
 
+}
+.info{
+    display: flex;
+}
+
+
+  .info p {
+   color: rgba(255, 255, 255, 0.76);
+   margin: 0;
+   font-style: normal;
+   text-decoration: none;
+   /* text-transform: uppercase; */
+   /* letter-spacing: 5px; */
+   /* word-spacing: 10px; */
+  }
+
+
+  .skills {
+      width: 50%;
+    font-size: 20px;
+    margin-left:  3px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow: 3px 3px 5px rgb(171, 219, 221); 
+    flex: 1 1 auto;
+  margin: 0 7px;
+  }
+
+
+   .навыки-заголовок {
+    margin-left: 30px;
+    padding-top: 1px;
+    font-size: 40px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.76);
+    margin-block-end: 20px;
+    position: relative;
+   }
+   .навыки-заголовок::before{
+    content: "";
+    position: absolute;
+    left: 9%;
+    bottom: 10px;
+    width: 113px;
+    height: 18px;
+    transform: skew(-15deg) translateX(-50%);
+    background: rgba(59, 139, 243, 0.308);
+    z-index: -1;
+   }
+  
+
+
+
+   .box1 {
+       display: flex;
+       margin: 0 -5px;
+   }
+  
+   .project {
+    width: 50%;
+    font-size: 20px;
+    margin-left:  3px;
+    padding-bottom: 15px;
+
+    border-radius: 10px;
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow: 3px 3px 5px rgb(171, 219, 221); 
+    flex: 1 1 auto;
+  margin: 0 7px;
+  }
+
+
+   .заголовок-project {
+    margin-left: 30px;
+    padding-top: 1px;
+    font-size: 40px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.76);
+    margin-block-end: 20px; 
+   }
+
+   .заголовок-project::before{
+    content: "";
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    bottom: 50px;
+    width: 205px;
+    height: 19px;
+    transform: skew(-15deg) translateX(-50%);
+    background: rgba(59, 139, 243, 0.308);
+    z-index: -1;
+   }
+
+
+ .social {
+    padding-left: 10px;
+   margin: 0px; 
+   border-radius: 10px;
+   border: 1px solid rgb(253, 253, 253);
+   box-shadow: 3px 3px 5px rgb(171, 219, 221);
+   
+ } 
+
+ a{
+  color: rgba(255, 255, 255, 0.76);
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(38, 95, 253);
+  text-decoration: underline;
+}
+
+a:active {
+  color:rgb(38, 95, 253);
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+  }
 
 .текст-заголовок {
-  font-size: 25px;
-  font-weight: bold;
-  color:rgba(255, 255, 255, 0.76);
-  margin-block-end: 20px;
+font-size: 25px;
+font-weight: bold;
+color:rgba(255, 255, 255, 0.76);
+margin-block-end: 20px;
 }
 
+
+/* .текст-заголовок:last-child {
+    text-align:center;
+}  */
+
 .hobbyes {
-       margin: 0px; 
-       padding-bottom: 15px;
-       border-radius: 10px;
-       border: 1px solid rgb(253, 253, 253);
-       box-shadow: 3px 3px 5px rgb(171, 219, 221);
-       
+    padding-left: 10px;
+   margin-left:  3px; 
+   padding-bottom: 15px;
+   border-radius: 10px;
+   border: 1px solid rgb(253, 253, 253);
+   box-shadow: 3px 3px 5px rgb(171, 219, 221);
+   
+}
+
+.list {
+    padding-left: 25px;
+    color:rgba(255, 255, 255, 0.76);
+    list-style: none;
+}
+
+.list li {
+    padding-bottom: 5px;
 }
 .hobbyes a{
-  padding-left: 25px;
+padding-left: 25px;
 }
 
 .Experience {
-  color:rgba(255, 255, 255, 0.76);
-  margin: 0px; 
-  padding-bottom: 15px;
-       border-radius: 10px;
-       border: 1px solid rgb(253, 253, 253);
-       box-shadow: 3px 3px 5px rgb(171, 219, 221);
+     padding-left: 10px;
+color:rgba(255, 255, 255, 0.76);
+margin-left:  3px;
+margin: 0px; 
+padding-bottom: 15px;
+   border-radius: 10px;
+   border: 1px solid rgb(253, 253, 253);
+   box-shadow: 3px 3px 5px rgb(171, 219, 221);
 }
- .Experience table {
-   padding-left: 20px;
- }
 
+.table {
+padding-left: 20px;
+width: 25%;
+}
+.table td {
+    padding-bottom: 10px;
+}
 
 figure {
-  display:flex;
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+display:flex;
+padding-top: 0;
+margin-top: 0;
+margin: 0 20px;
+
 }
 
 .contact {
-  color:rgba(255, 255, 255, 0.76);
-  margin: 0px; 
-  padding-bottom: 15px;
-       border-radius: 10px;
-       border: 1px solid rgb(253, 253, 253);
-       box-shadow: 3px 3px 5px rgb(171, 219, 221);
+padding-left: 10px;
+ margin-left:  3px;
+color:rgba(255, 255, 255, 0.76);
+margin: 0px; 
+padding-bottom: 15px;
+   border-radius: 10px;
+   border: 1px solid rgb(253, 253, 253);
+   box-shadow: 3px 3px 5px rgb(171, 219, 221);
 }
 
-.contact form {
-  padding-left: 20px;
+.P-contact {
+    text-align:center;
+    padding-left: 0px;
+    padding-right: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.76);
+    margin-block-end: 20px; 
 }
 
+/* 
 .contact input {
-  border: 1px solid #638dff;
-  border-radius: 5px;
-  text-decoration: none;
-	color: rgb(0, 0, 0);
-	background-color: #fff;
+border: 1px solid #638dff;
+border-radius: 5px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+background-color: #fff;
+outline: none;
+} */ 
+
+.form {
+    padding-left: 20px;
 }
 
-.contact textarea {
-  border: 1px solid #638dff;
-  border-radius: 5px;
-  text-decoration: none;
-	color: rgb(0, 0, 0);
-	background-color: #fff;
-}
+
+ .form label {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.76);
+  } 
+   
+  .form input, .form textarea {
+      margin-left: 5px;
+      padding-left: 5px;
+      margin-bottom: 0px;
+      margin-top: 0;
+    width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: rgb(255, 255, 255);
+    padding: 1px 0 1px;
+    outline: none;
+    font-family: inherit;
+
+  }
+
+  .form input::placeholder {
+ color: rgb(148, 148, 148);
+ opacity: 1;
+    font-size: 14px;
+    font-style: italic;
+  }
 
 
 .кнопка {
-  display: inline-block;
-	box-sizing: border-box;
-	padding: 1px;
-	margin: 0 7px 7px 0;
-	outline: none;
-	border: 1px solid #638dff;
-	border-radius: 25px;
-	height: 24px;
-	line-height: 0;
-	font-size: 7px;
-	font-weight: 250;
-	text-decoration: none;
-	color: #fff;
-	background-color: #fff;
-	position: relative;
-	overflow: hidden;
-	vertical-align: top;
-	cursor: pointer;
-	user-select: none;
-	appearance: none;
-	touch-action: manipulation;
+display: inline-block;
+box-sizing: border-box;
+padding: 1px;
+margin: 0 7px 7px 0;
+outline: none;
+border: 1px solid #638dff;
+border-radius: 25px;
+height: 24px;
+line-height: 0;
+font-size: 7px;
+font-weight: 250;
+text-decoration: none;
+color: #fff;
+background-color: #fff;
+position: relative;
+overflow: hidden;
+vertical-align: top;
+cursor: pointer;
+user-select: none;
+appearance: none;
+touch-action: manipulation;
 }
 
 .кнопка:focus-visible {
-	box-shadow: 0 0 0 3px lightskyblue;
+box-shadow: 0 0 0 3px lightskyblue;
 }
 .кнопка:hover {
-	background-color: lightskyblue;
+background-color: lightskyblue;
 }
 .кнопка:active {
-	background-color:lightskyblue;
+background-color:lightskyblue;
 }
 
+.span {
+    padding-top: 10px;
+}
 .кнопка span {
-	display: block;	
-	box-sizing: border-box;
-	padding: 0 25px;    
-	height: 21px;
-	line-height: 19px;    
-	border: 1px solid #a7e4f3;
-	border-radius: 25px;    
-	font-size: 14px;
-	color: #FFFFFF;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #4790d3;
-	text-align: center;
-	font-weight: 300;
+display: block;	
+box-sizing: border-box;
+padding: 0 25px;    
+height: 21px;
+line-height: 19px;    
+border: 1px solid #a7e4f3;
+border-radius: 25px;    
+font-size: 14px;
+color: #FFFFFF;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #4790d3;
+text-align: center;
+font-weight: 300;
 }
 
-.отступ {
-  padding: 0px 4px;
+
+#кнопка1 {
+     text-decoration: none;
+     color: #fff;
+ }
+
+
+.row {
+    display: flex;
+    margin-bottom: 25px;
 }
+.отступ {
+padding: 0px 4px;
+}
+
