@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 111
+   <input id="elem" value="text"> -->
+
+   <!-- 222 -->
+   <input id="elem" value="text">
+    
+
+<script>
+//     111
+// let elem = document.querySelector('#elem');
+//     elem.addEventListener('focus', function() {
+//         elem.value= 1;
+//     });
+//     elem.addEventListener('blur', function() {
+//         elem.value= 2;
+//     });
+
+// 222
+let elem = document.querySelector('#elem');
+   elem.addEventListener('blur', function() {
+       elem.value= (elem.value)**2;
+    });
+        
+
+
+
+</script>
+
+</body>
+</html>
