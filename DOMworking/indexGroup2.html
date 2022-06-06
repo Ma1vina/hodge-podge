@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <!-- 111 -->
 <!-- <input type="text" value="2">
 <input type="text" value="5">
@@ -27,9 +28,10 @@
 <!-- <a id="elem" href="https://github.com/Ma1vina" target="_blank">GitHub</a> -->
 
 <!-- 555 -->
+<input type="submit" value="1"> 
 
-    <script
-//         111
+<script>
+//  111
 //     let elems = document.querySelectorAll("input");
 
 //     for (let elem of elems) {
@@ -66,7 +68,20 @@
 
 //     function func(){ elem.innerHTML = elem.innerHTML + "(" + elem.href + ")";
 // };
+
+// 555
+ let buttons = document.querySelectorAll("input"); 
+ for(let elem of buttons){ 
+ elem.addEventListener("click", func); 
+ 
+ function func(){ 
+ this.value++  //или elem.value
+ while(this.value>10){  
+this.removeEventListener("click",func) 
+ } 
+ } 
+ };
     </script>
-    
+
 </body>
 </html>
