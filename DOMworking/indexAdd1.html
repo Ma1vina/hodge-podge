@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="div" >привеееть</div>
+<input id="button" type="submit">
+
+
+    <script>
+        let elem = document.querySelector("#div");
+        let button=document.querySelector("#button");
+
+        button.addEventListener("click",function(){
+            elem.style.color = "red";
+            elem.style.fontSize = '20px';
+            elem.style.border = "3px solid red";
+            elem.style.borderRadius = "25%";
+            elem.style.height = "30px";
+            elem.style.width = "90px";
+            elem.style.backgroundColor ="blue";
+
+        });
+     
+
+
+    </script>
+    
+</body>
+</html>
