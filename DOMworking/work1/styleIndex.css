@@ -1,0 +1,19 @@
+/* 111
+
+.colored {
+	color: red;
+} */
+
+
+/* 222 */
+.colored {
+	color: red;
+}
+
+.text-thickness {
+    font-weight: bold;
+}
+
+.style-text {
+    text-decoration-line: line-through;
+}

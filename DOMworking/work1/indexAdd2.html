@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+
+    <!-- 111
+<p>text1</p>
+<p>text2</p>
+<p>text3</p> -->
+
+<p>ПРИВЕТ!</p>
+
+<input id="button1" type="submit" value="перечеркнуть">
+<input  id="button2" type="submit" value="сделать жирным">
+<input  id="button3" type="submit" value="сделать красным">
+
+<script>
+let button1 = document.querySelector("#button1");
+let button2 = document.querySelector("#button2");
+let button3 = document.querySelector("#button3");
+let p = document.querySelector("p");
+
+
+    button3.addEventListener("click",func);
+    function func(){
+     p.classList.add("colored");
+    button3.addEventListener("click",function(){
+        p.classList.toggle('colored');
+     })
+    };
+
+button2.addEventListener("click",func2);
+    function func2(){
+     p.classList.add("text-thickness");
+    button2.addEventListener("click",function(){
+        p.classList.toggle('text-thickness');
+     })
+    };
+
+button1.addEventListener("click",func1);
+    function func1(){
+     p.classList.add("style-text");
+    button1.addEventListener("click",function(){
+        p.classList.toggle('style-text');
+     })
+    };
+
+
+    
+    
+    //     111
+//     let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.classList.add('colored'); 
+// })
+// };
+</script>
+    
+</body>
+</html>
