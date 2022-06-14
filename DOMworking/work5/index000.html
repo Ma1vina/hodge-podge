@@ -20,7 +20,69 @@
         <p class="ggg">text</p>
     </div> -->
 
+    <!-- 333 -->
+    <!-- Сделайте так, чтобы по клику на див в конец его текста добавилось содержимое его атрибута data-text. -->
+<!-- 
+    <div id="elem" data-text="str">text</div> -->
+
+    
+    <!-- 444 -->
+    <!-- Сделайте так, чтобы по клику на любой из дивов ему в конец записывался его порядковый номер. -->
+<!-- <div data-num="1">text</div>
+<div data-num="2">text</div>
+<div data-num="3">text</div>
+<div data-num="4">text</div>
+<div data-num="5">text</div> -->
+
+
+<!-- 555 -->
+<!-- Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, записывая их в какой-нибудь 
+пользовательский атрибут. Пусть по двойному клику на эту кнопку на экран выводится, сколько кликов по этой
+ кнопке было сделано. -->
+
+ <!-- <input id ="button" type="submit" data-num="">
+ <p>0</p> -->
+
+
+ <!-- 666 -->
+ <!-- В этом инпуте в атрибуте data-length содержится количество символов, которое нужно ввести в инпут.
+  Сделайте так, чтобы по потери фокуса, если количество введенных символов не совпадает с заданным, выводилось
+сообщение об этом. -->
+ <!-- <input id="elem" type="text" data-length="5"> -->
+
+
+ <!-- 777
+В этом инпуте атрибуты data-min и data-max содержат диапазон. Сделайте так, чтобы по потери фокуса,
+ если количество введенных символов не попадает в этот диапазон, выводилось сообщение об этом. -->
+ 
+ <!-- <input id="elem" type="text" data-min="5" data-max="10"> -->
+
+ <!-- 888 -->
+ <!-- Сделайте так, чтобы по клику на див в конец его текста добавлялась стоимость покупки, равная цене,
+  умноженной на количество. -->
+  <!-- <div id="elem" data-product-price="1000" data-product-amount="5">
+	товар яблоки
+</div> -->
+
+<!-- 999
+Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num запишите порядковый номер этого абзаца. 
+Используйте метод setAttribute. -->
+<p data-num="">/</p>
+<p data-num="">/</p>
+<p data-num="">/</p>
+
+
     <script>
+        // 999
+        let elems = document.querySelectorAll("p");
+
+       
+        for(let i = 1; i<elems.length+1; i++){
+         this.setAttribute("data-num",(i)); 
+         alert(this.getAttribute("data-num"));
+    }
+
+
         // 111
         // let elem = document.getElementById("elem");
         // elem.innerHTML = "111"
@@ -30,6 +92,82 @@
 //    let parent = document.querySelector('#parent');
 // let elems1 =  parent.querySelector(".www");
 // let elems2 = parent.querySelector(".ggg");
+
+// 333
+// let elem = document.querySelector("#elem");
+//         elem.addEventListener("click",function(){
+//             elem.innerHTML = elem.innerHTML + elem.dataset.text
+//         });
+
+// 444
+// let elems = document.querySelectorAll("div");
+//       for(let elem of elems){
+//         elem.addEventListener("click",function(){
+//           this.innerHTML = this.innerHTML+ elem.dataset.num
+//         })
+//       }
+
+// 555
+// let button = document.querySelector("#button");
+//         let p = document.querySelector("p");
+
+//         button.addEventListener("dblclick",func);
+//         var i = 0;
+//         function func(){
+//             i= i +2;
+//             button.dataset.num = i;
+//             alert(button.dataset.num);
+//         }
+//  или записать  в абзац:
+// button.addEventListener("dblclick",func);
+//         var i = 0;
+//         function func(){
+//             i= i +2;
+//             p.innerHTML = i
+//         };
+
+// 666
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("blur",function(){
+//    if(elem.value.length == elem.dataset.length){
+// alert("Корректный ввод!")
+//   elem.value = "";
+//      } else {
+//    alert("Кол-во введённых символов должно быть - 5. Пожалуйста повторите!")
+//      }
+// });
+
+
+// 777
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("blur",function(){
+//     let str = elem.value.length;
+//     let min = elem.dataset.min;
+//     let max = elem.dataset.max;
+// if((str >= min)&&(str <= max)){
+//   alert("корректный ввод!") 
+// } else{
+//     alert("кол-во введеных символов должно быть не менее 5-ти и не более 10-ти. Пожалуйста повторите!")
+//     elem.value = "";
+// }
+// });
+ 
+// 888
+// let elem = document.querySelector("#elem");
+//         elem.addEventListener("click",function(){
+//           let price = elem.dataset.productPrice;
+//           let amount = elem.dataset.productAmount;
+//           let total= Number(price)*Number(amount);
+
+//             elem.innerHTML = elem.innerHTML + " = " + total;
+//         });
+
+
+
+
+
 
 
 
