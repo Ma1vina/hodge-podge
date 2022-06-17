@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="node-style.css">
+</head>
+<body>
+
+    <!-- 111
+    <input id="button" type="submit">
+		<ul>
+		        <li>Первый элемент</li>
+		        <li>Второй элемент</li>
+		        <li>Третий элемент</li>
+		</ul>
+		<p id = "result"></p> -->
+
+        <!-- 222 -->
+        <!-- Переберите циклом все узлы этого дива и выведите в консоль тексты всех узлов. (вывела по клику на кнопку в параграф)-->
+        <div id="elem">txt<b> tag </b><!--com--> txt<b> tag </b><!--com--></div>
+        <!-- <p id="par"></p>
+        <input id="button" type="submit"> -->
+
+<!-- 333
+Переберите циклом все узлы этого дива и выведите в консоль тексты всех комментариев и текстовых узлов. -->
+        <div id="elem">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+        <p id="par">1</p>
+        <input id="button" type="submit">
+
+		<script>
+            
+    //         111
+    //         let button = document.querySelector("#button");
+    //         const listElements = document.querySelectorAll("li"); // выбираем все элементы <li>
+	//         let result =  document.getElementById("result"); // находим элемент по id
+    //         button.addEventListener("click", myFunc);
+
+	// function myFunc() {
+	//   for(let i = 0; i < listElements.length; i++) { // проходим циклом по всем элементам <li>
+	//     result.innerHTML = result.innerHTML + listElements[i].textContent + "<br>"; // добавляем в содержимое элемента строковое значение,
+    //     // представляющее значение текущего узла и перенос строки
+	//   }
+	// }
+
+    //   222
+     // let elem = document.querySelector("#elem");
+            // let par = document.querySelector("#par");
+            //  let button = document.querySelector("#button");
+
+
+            //  button.addEventListener("click",function(){
+            //    for(let node of elem.childNodes){
+            //    par.innerHTML = par.innerHTML + node.textContent;    
+            // }
+            //  })
+            //  в консоль:
+            // let elem = document.querySelector("#elem");
+            // for(let node of elem.childNodes){
+            //     console.log(node.textContent);
+            // }
+
+// 333
+            let elem = document.querySelector("#elem");
+            let par = document.querySelector("#par");
+            let button = document.querySelector("#button");
+
+
+            button.addEventListener("click",function(){
+                for(let node of elem.childNodes){
+                    if(node.nodeType = Node.COMMENT_NODE){
+                        if(node.nodeType = Node.TEXT_NODE){
+                        par.innerHTML = par.innerHTML + node.nodeValue
+                    }
+                }
+            }
+        });
+        
+		</script>
+    
+</body>
+</html>
