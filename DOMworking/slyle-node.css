@@ -1,3 +1,11 @@
 .text {
     font-weight: bold;
 }
+
+.right{
+    color: blue;
+}
+
+.wrong {
+    color: darkmagenta;
+}

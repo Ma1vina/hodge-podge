@@ -45,23 +45,48 @@
 <button>click</button> -->
 
 <!-- 8.В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
-<input id="1">
+<!-- <input id="1">
 <input id="2">
 <input id="3">
+
+<button id="btn">click</button> -->
+
+
+<!-- 9.В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
+<!-- <input id="inp1">
+<input id="inp2">
+<input id="inp3">
+
+<button id="btn">click</button> -->
+
+<!-- 10/ В первые два инпута вводятся числа. По клику на кнопку в абзац должна вывестись сумма этих чисел: -->
+<!-- <input id="inp1">
+<input id="inp2">
+<p id="res">"0"</p>
+
+<button id="btn">click</button> -->
+
+<!-- 11.По клику на кнопку нужно проверить, что текст в каждом инпуте совпадает с текстом его data атрибута: -->
+<input data-text="text1">
+<input data-text="text2">
+<input data-text="text3">
 
 <button id="btn">click</button>
 
     <script>
+let inputs = document.querySelectorAll('input');
+let button = document.querySelector('#button');
 
-let btn  = document.querySelector('#btn');
-let inp1 = document.querySelector('#1');
-let inp2 = document.querySelector('#2');
-let inp3 = document.querySelector('#3');
 
-btn.addEventListener("click", function(){
-    
-})
-        
+button.addEventListener('click',function() {
+	for (let input of inputs) {
+		if (input.value === input.dataset.text) {
+			input.classList.add('right')
+		} else {
+			input.classList.add('wrong')
+		}
+	}
+});
         //1
         // let elems = document.querySelectorAll('p');
         // for(let elem of elems){
@@ -127,6 +152,40 @@ btn.addEventListener("click", function(){
 //             }
 //             alert(sum)
 //          })
+
+//8
+
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#1');
+// let inp2 = document.querySelector('#2');
+// let inp3 = document.querySelector('#3');
+
+// btn.addEventListener("click", function(){
+    
+// })
+
+// 9
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+// let inp3 = document.querySelector('#inp3');
+
+// btn.addEventListener("click", function(){
+//     let sum = Number(inp1.value) + Number(inp2.value);
+//     inp3.value = sum;
+// });
+
+// 10/
+// let btn  = document.querySelector('#btn');
+// let res  = document.querySelector('#res');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+
+// btn.addEventListener("click",function(){
+//     let sum = Number(inp1.value) + Number(inp2.value);
+//     res.textContent = sum;
+// })
+       
 
         
 
