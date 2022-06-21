@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="slyle-node.css">
+</head>
+<body>
+   <!-- 1 Код должен добавить текст в конец каждого абзаца: -->
+<!-- <p>1</p>
+<p>2</p>
+<p>3</p> -->
+
+<!-- 
+2 По клику на абзац его значение должно увеличиться на единицу: -->
+<!-- <p>1</p>
+<p>2</p>
+<p>3</p> -->
+
+<!-- 3.По клику на кнопку текст абзаца должен стать жирным: -->
+<!-- <p>text</p>
+<button>click</button> -->
+
+<!-- 4.По клику на кнопку должна вывестись сумма чисел из абзацев: -->
+<!-- <p>1</p>
+<p>2</p>
+<p>3</p>
+<button>click</button> -->
+
+<!-- 5.По клику на абзац ему в конец должен добавиться заданный текст: -->
+<!-- <p>1</p>
+<p>2</p>
+<p>3</p> -->
+
+<!-- 6.По клику на кнопку текст каждого абзаца должен стать жирным: -->
+<!-- <p>text1</p>
+<p>text2</p>
+<p>text3</p>
+<button>click</button> -->
+
+<!-- 7.В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма чисел из инпутов: -->
+<!-- <input>
+<input>
+<input>
+<button>click</button> -->
+
+<!-- 8.В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
+<!-- <input id="1">
+<input id="2">
+<input id="3">
+
+<button id="btn">click</button> -->
+
+
+<!-- 9.В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
+<!-- <input id="inp1">
+<input id="inp2">
+<input id="inp3">
+
+<button id="btn">click</button> -->
+
+<!-- 10/ В первые два инпута вводятся числа. По клику на кнопку в абзац должна вывестись сумма этих чисел: -->
+<!-- <input id="inp1">
+<input id="inp2">
+<p id="res">"0"</p>
+
+<button id="btn">click</button> -->
+
+<!-- 11.По клику на кнопку нужно проверить, что текст в каждом инпуте совпадает с текстом его data атрибута: -->
+<!-- <input data-text="text1">
+<input data-text="text2">
+<input data-text="text3">
+
+<button id="btn">click</button> -->
+
+<!-- 12.По клику на кнопку нужно проверить, что текст в каждом инпуте совпадает с текстом соответствующего элемента массива: -->
+<input>
+<input>
+
+<button id="btn">click</button>
+
+    <script>
+
+let inputs = document.querySelectorAll('input')
+let button = document.querySelector('#btn')
+
+let arr = [2,3];
+
+button.addEventListener('click',function() {
+	for (let input of inputs) {
+		for (let i=0; i<arr.length; i++) {
+            if(Number(input.value) == arr[i]){
+            input.classList.add('right')
+			} else {
+				input.classList.add('wrong')
+			}
+		}
+	}
+});
+
+
+
+        //1
+        // let elems = document.querySelectorAll('p');
+        // for(let elem of elems){
+        //     elem.textContent = elem.textContent + "!"
+        // }
+
+        //2
+//         let elems = document.querySelectorAll('p');
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.innerHTML = Number(this.innerHTML) + 1
+// 	});
+// }
+
+        //3
+        // let p = document.querySelector("p");
+        // let button = document.querySelector("button");
+
+        // button.addEventListener("click", function(){
+        //     p.classList.add("text");
+        // })
+
+        //4
+    //     let button = document.querySelector('button');
+    //   let elems  = document.querySelectorAll('p');
+
+    //   button.addEventListener("click", function(){
+    //     var sum = 0;
+    //     for(let elem of elems){
+    //     sum = sum + Number(elem.textContent)
+    //     }
+    //     alert(sum);
+    //   })
+
+        //5
+        // let elems = document.querySelectorAll('p');
+         
+        // for(let elem of elems){
+        //     elem.addEventListener("click", function(){
+        //    this.textContent = this.textContent + "!"
+        //     })
+        //  };
+
+        // 6
+//         let button = document.querySelector('button');
+//         let elems  = document.querySelectorAll('p');
+
+//         button.addEventListener('click', function() {
+// 	for (let elem of elems) {
+// 		elem.classList.add("text")
+// 	}
+// });
+
+
+// 7
+// let button = document.querySelector('button');
+//         let elems  = document.querySelectorAll('input');
+//          let sum = 0;
+         
+//          button.addEventListener("click",function(){
+//             for(let elem of elems){
+//                 sum = sum + Number(elem.value)
+//             }
+//             alert(sum)
+//          })
+
+//8
+
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#1');
+// let inp2 = document.querySelector('#2');
+// let inp3 = document.querySelector('#3');
+
+// btn.addEventListener("click", function(){
+    
+// })
+
+// 9
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+// let inp3 = document.querySelector('#inp3');
+
+// btn.addEventListener("click", function(){
+//     let sum = Number(inp1.value) + Number(inp2.value);
+//     inp3.value = sum;
+// });
+
+// 10/
+// let btn  = document.querySelector('#btn');
+// let res  = document.querySelector('#res');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+
+// btn.addEventListener("click",function(){
+//     let sum = Number(inp1.value) + Number(inp2.value);
+//     res.textContent = sum;
+// })
+     
+
+// 11
+// let inputs = document.querySelectorAll('input');
+// let button = document.querySelector('#btn');
+
+
+// button.addEventListener('click',function() {
+// 	for (let input of inputs) {
+// 		if (input.value == input.dataset.text) {
+// 			input.classList.add("right")
+// 		} else {
+//             input.classList.add('wrong')
+// 		}
+// 	}
+// });
+
+        
+
+    </script>
+    
+</body>
+</html>
