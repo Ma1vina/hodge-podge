@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!-- 1.Дан инпут и абзац. По потери фокуса в инпуте запишите значение инпута в конец текста абзаца. -->
+<!-- <input type="text">
+<p>123</p> -->
+
+<!-- 2.Дано несколько инпутов, абзац и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите 
+их сумму в абзац. -->
+<!-- <input type="text">
+<input type="text">
+<input type="text">
+<p>summ = </p>
+<input type="submit" id="btn"> -->
+
+<!-- 3.Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа. -->
+<!-- <input type="text"> -->
+
+<!-- 4.Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее арифметическое этих чисел
+ (сумма делить на количество). -->
+ <!-- <input type="text"> -->
+
+ <!-- 5.Даны 4 инпута. В первый инпут вводится ФИО через пробел. По потери фокуса запишите фамилию, имя и отчество 
+ в остальные 3 инпута. -->
+ <!-- <input type="text" id="input">
+<input type="text" class="name">
+<input type="text" class="name">
+<input type="text" class="name">  -->
+
+<!-- 6. Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса
+ инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте). -->
+ 
+
+    <script>       
+// 1.
+// let inp = document.querySelector("input");
+// let par = document.querySelector("p");
+
+// inp.addEventListener("blur",function(){
+//     par.textContent = par.textContent + inp.value;
+// });
+
+// 2.
+// let inputs = document.querySelectorAll("input");
+// let p = document.querySelector("p");
+//         let btn = document.querySelector("#btn");
+//         let sum = 0;
+
+//         btn.addEventListener("click", function(){
+//             for(let i=0; i<inputs.length;i++){
+//              sum = sum + Number(inputs[i].value);
+//             }
+//             p.textContent = p.textContent + sum;
+//         });
+
+// 3.
+// let inp = document.querySelector("input");
+
+// inp.addEventListener("blur",function(){
+//     sum = getSum(getArr(inp.value))
+//   inp.value = sum;
+// })
+
+
+// function getArr (num){
+//     let arr = num.split("");
+//     return num;
+// }
+
+// function getSum(arr){
+// let sum = 0;
+// for(let i=0;i<arr.length;i++){
+//     sum = sum + Number(arr[i]);
+// }
+// return sum;
+// };
+
+// 4.
+// let inp = document.querySelector("input");
+
+// inp.addEventListener("blur",function(){
+//   inp.value = getSumm(getArr(inp.value))
+// })
+
+// function getArr(num){
+//     let arr = num.split("");
+//     return num;
+// }
+
+// function getSumm(arr){
+//     let sum = 0;
+//     let midlle = 0;
+//     for(let i=0;i<arr.length;i++){
+//         sum = sum+ Number(arr[i]);
+//     }
+//     midlle = sum/arr.length
+//     return midlle;
+// }
+
+// 5.
+// var elem = document.querySelector('#input');
+// var elems = document.getElementsByClassName('name');
+
+// elem.addEventListener('blur', func);
+// function func() {
+// 		var str = elem.value;
+// 		var arr = str.split(' ');
+// 		for (var i = 0; i < arr.length; i++) {
+// 			elems[i].value = arr[i];
+// 		}
+// 	}
+	     
+
+
+
+
+
+    </script>
+</body>
+</html>
