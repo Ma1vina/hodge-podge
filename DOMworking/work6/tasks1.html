@@ -41,12 +41,35 @@
  <!-- 8.
  Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается с начала и с
  конца одинаково (например, мадам). -->
+ <!-- <input type="text" id="inp">
+ <input type="submit" id="btn"> -->
 
- <input type="text" id="inp">
- <input type="submit" id="btn">
+ <!-- 9.Дан инпут. В него вводится число. Проверьте по потери фокуса, что это число содержит внутри себя цифру 3. -->
+ <!-- <input type="text" id="inp">
+ <p>Содержит 3? - </p> -->
 
-    <script>  
- 
+ <!-- 10.Даны несколько абзацев и кнопка. По нажатию на кнопку запишите в конец каждого абзаца его порядковый номер. -->
+<!-- <p>Text</p>
+<p>Text</p>
+<p>Text</p>
+<input type="submit" id="btn"> -->
+
+<!-- 11.Даны ссылки. Добавьте в конец каждой ссылки ее href в круглых скобках. -->
+<!-- <a href="https://github.com/Ma1vina">ссылка1</a>
+<a href="https://github.com/Ma1vina">ссылка2</a> -->
+
+<!-- 12.Даны ссылки. Если ссылка начинается с http://, то добавьте ей в конец стрелку → (делается так: &rarr;). -->
+<!-- <a href="http://google.com">ссылка1</a>
+<a href="333">ссылка2</a>
+<a href="752">ссылка3</a>  -->
+
+<!-- 13.Даны несколько абзацев с числами. По нажатию на любой абзац запишите в него квадрат числа, которое в нем находится. -->
+  <!-- <p>2</p>  
+  <p>3</p>
+  <p>2</p> -->
+    
+    <script> 
+    
 // 1.
 // let inp = document.querySelector("input");
 // let par = document.querySelector("p");
@@ -181,6 +204,66 @@
 // 	alert('верно');
 // 	return;
 // }
+
+// 9.//     let inp = document.querySelector("#inp");
+//     let par = document.querySelector("p");
+
+    
+
+//     inp.addEventListener('blur', func);
+
+// function func() {
+//   let arr = inp.value.split('');
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === '3') {
+//       return par.textContent = par.textContent + 'Содержит';
+
+//     }
+//   }
+
+//   return par.textContent = par.textContent + 'Не содержит';
+// }
+
+// 10.
+// var par = document.getElementsByTagName('p');
+//      var btn= document.getElementById('btn');
+// btn.addEventListener('click', func);
+
+// function func() {
+// 	for (var i = 0; i< par.length; i++) {
+// 		par[i].innerHTML = par[i].innerHTML+' '+(i + 1);
+// 	}
+//  } 
+
+// 11.
+// let link = document.getElementsByTagName("a");
+//     for(let i=0; i<link.length; i++){
+//     link[i].innerHTML = link[i].innerHTML + "( " + link[i].href + ")" + "<br>"
+//     }
+    
+// 12.
+// var elem = document.getElementsByTagName('a');
+// start();
+
+// function start() {
+// 	for (var i = 0; i < elem.length; i++) {
+// 		if (elem[i].href.indexOf('http://') == 0) {
+//  			elem[i].innerHTML = elem[i].innerHTML + '&rarr;';
+// 		}
+// 	}
+//  }   
+
+// 13.
+// let par = document.querySelectorAll("p");
+
+//     for(let i=0; i<par.length;i++){
+//         par[i].addEventListener("click",function(){
+//             this.textContent = (Number(this.textContent))**2
+//         })
+//     }
+    
+  
+
 
 
 
