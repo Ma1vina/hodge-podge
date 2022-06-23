@@ -33,9 +33,20 @@
 
 <!-- 6. Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса
  инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в этом же инпуте). -->
- 
+ <!-- <input type="text"> -->
 
-    <script>       
+ <!-- 7.Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте. -->
+ <!-- <input type="text"> -->
+
+ <!-- 8.
+ Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, что это слово читается с начала и с
+ конца одинаково (например, мадам). -->
+
+ <input type="text" id="inp">
+ <input type="submit" id="btn">
+
+    <script>  
+ 
 // 1.
 // let inp = document.querySelector("input");
 // let par = document.querySelector("p");
@@ -113,7 +124,66 @@
 // 			elems[i].value = arr[i];
 // 		}
 // 	}
-	     
+	   
+// 6. 
+// let inp =document.querySelector("input");
+
+// inp.addEventListener("blur",func);
+
+
+//        function getbigletter(str){
+//     let arr = str.split(" ");
+//     for(let i=0; i<arr.length;i++){
+//         arr[i] = arr[i].split("");
+//         arr[i][0] = arr[i][0].toUpperCase();
+//         arr[i] = arr[i].join("");
+//     }
+//     str = arr.join(' ');
+//     return str;
+// }
+
+// function func(){
+//     inp.value = getbigletter(inp.value);
+// }
+
+// 7.
+// let inp = document.querySelector("input");
+
+//     inp.addEventListener("blur",func);
+
+//     function func1(str){
+//         let arr = str.split(" ");
+//         str = arr.length;
+//         return str; 
+//     }
+
+//     function func(){
+//         inp.value = func1(inp.value);
+//     }
+
+// 8. 
+// var inp = document.querySelector("#inp");
+//     var btn = document.querySelector("#btn");
+
+//     btn.addEventListener("click", func);
+     
+//     function func(str){
+//         var str = inp.value;
+
+//         var arr = str.split('');
+//         var arr2 = str.split('').reverse();
+// 	for(var i = 0; i < arr.length; i++) {
+// 		if(arr[i]!== arr2[i]) { 
+// 			alert('неверно');
+// 			return;
+// 		}
+//   	}
+// 	alert('верно');
+// 	return;
+// }
+
+
+
 
 
 
