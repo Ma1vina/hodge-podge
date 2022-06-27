@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="slyle-node.css">
 </head>
 <body>
 <!-- 1.Дан инпут и абзац. По потери фокуса в инпуте запишите значение инпута в конец текста абзаца. -->
@@ -67,9 +68,54 @@
   <!-- <p>2</p>  
   <p>3</p>
   <p>2</p> -->
+
+  <!-- 14. Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или уменьшать на 1 значение инпута. Сделайте так,
+   чтобы это значение не могло стать меньше нуля. -->
+   <!-- <input id="num" type="text" value="0">
+<input class="cls" type="submit" value="+1">
+<input class="cls" type="submit" value="-1"> -->
+
+<!-- 15.Дан инпут. Даны абзацы. Пусть в этот инпут записывается суммарное количество нажатий по этим абзацам. -->
+<!-- <input type="text">
+ <p>click</p>
+ <p>click</p>
+ <p>click</p> -->
+<!-- 
+ 16.На странице есть дивы. В них есть текст. Обойдите все дивы и обрежьте тот текст, который в них стоит так, чтобы он
+  стал длиной 10 символов. И добавьте троеточие в конец обрезанного текста -->
+  <!-- <div>
+    text text text
+  </div>
+  <div>
+    text text text
+  </div>
+  <div>
+    text text text
+  </div>
+  <input type="submit" id="btn"> -->
+
+  <!-- 17.Дан инпут. В него вводится число. По потери фокуса проверьте, что в нем лежит число от 1 до 100. Если это так 
+  - покрасьте инпут в зеленый цвет, а если не так - в красный. -->
+  <!-- <input type="text"> -->
+
+  <!-- 18.Дан инпут и кнопка. По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут. -->
+    <!-- <input type="text" id="inp">
+    <input type="submit" id="btn"> -->
     
-    <script> 
-    
+    <!-- 19. Дан инпут, кнопка и абзац. В инпут вводится число. По нажатию на кнопку выведите в абзац факториал этого числа. -->
+    <!-- <input type="text" id="inp">
+    <input type="submit" id="btn">
+    <p>ответ: </p> -->
+
+    <!-- 20.Даны 3 инпута, кнопка и абзац. В инпуты вводятся коэффициенты квадратного уравнения. По нажатию на кнопку
+    найдите корни этого уравнения и выведите их в абзац. -->
+    <!-- <input type="text">
+    <input type="text">
+    <input type="text">
+    <button>click</button> -->
+
+    <script>
+
 // 1.
 // let inp = document.querySelector("input");
 // let par = document.querySelector("p");
@@ -261,6 +307,111 @@
 //             this.textContent = (Number(this.textContent))**2
 //         })
 //     }
+
+// 14.
+// let input = document.querySelector('#num');
+//   let buttons = document.getElementsByClassName('cls');
+//     for (let i = 0; i < buttons.length; i++) {
+//         buttons[i].addEventListener('click', func);
+//   }
+
+//   function func() {
+//     let sum = +input.value + +this.value;
+//     if (sum >= input.value) { // input.value=0;
+//       input.value = sum;
+//     } else {
+//       input.value = 0;
+//     }
+//   }
+
+// 15.
+// let inp = document.querySelector("input");
+//     let p = document.querySelectorAll("p") 
+//   let sum = 0;
+//     for(let i=0;i<p.length;i++){
+//         p[i].addEventListener("click",func);
+//         function func(){
+//         sum++ 
+//         inp.value = sum;
+//         }
+//     }
+
+// 16.
+// let divs = document.querySelectorAll("div");
+//         let btn = document.querySelector("#btn");
+
+//         btn.addEventListener("click",func)
+
+//         function func(){
+//             for (let i = 0; i < divs.length; i++) {
+//       divs[i].innerHTML = divs[i].innerHTML.slice(0, 10) + '...';
+//     }
+//         }
+
+// 17.
+// let inp = document.querySelector("input");
+
+//         inp.addEventListener("blur", func);
+//         function func(){
+//          if(this.value >=1 && this.value <=100){
+//             inp.classList.add("colored")
+//          }else{
+//             inp.classList.add("colored2")
+//          }
+//         }
+
+// 18.
+// let inp = document.querySelector("#inp");
+//         let btn = document.querySelector("#btn");
+//         btn.addEventListener("click",func);
+        
+//         function func (){
+//             let str = "";
+//             let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+//             for (let i = 0; i < 8; i++) {
+//                 str = str + text.charAt(Math.floor(Math.random() * text.length));
+//             }
+//           inp.value = str;
+//         }
+
+// 19.
+//     let btn = document.querySelector("#btn");
+//     let inp = document.querySelector("#inp");
+//     let par = document.querySelector("p");
+
+//     btn.addEventListener("click",func2);
+
+//   function func2(){
+//     par.innerHTML = par.innerHTML + func(inp.value)
+//   }
+
+//     function func(num){
+//         let x = 1;
+//         if (num == 0 || num == 1){
+//           return x;
+//         }else{
+//           for(let i = num; i >= 1; i--){
+//             x = x * i;
+//           }
+//           return x;
+//         }  
+//       }
+
+// 20.
+// let inpts = document.querySelectorAll("input");
+//         let btn = document.querySelector("button");
+
+//         btn.addEventListener("click",func);
+//         function func(){
+//             for(let i=0; i<inpts.length;i++){
+//                 inpts[i].value = Math.sqrt(inpts[i].value)
+//             }
+//         }
+
+
+
+        
+  
     
   
 
