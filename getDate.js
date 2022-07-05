@@ -51,11 +51,67 @@
 // }
 
 //Определите сколько дней осталось до ближайшего воскресенья.
-let date = new Date();
+// let date = new Date();
 
-function func(num){
-    return (7 - date.getDay());
-}
+// function func(num){
+//     return (7 - date.getDay());
+// }
 
-console.log(func(date));
+// console.log(func(date));
+
+//
+// let date = new Date();
+// let day  = date.getDay();
+// let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+// console.log(days[day]);
+
+//
+// let months = [
+// 	'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+// 	'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+// ];
+// // Выведите с помощью этого массива название текущего месяца.
+// let date = new Date();
+// let month = date.getMonth();
+
+// console.log(months[month]);
+
+//
+// let date = new Date(2025, 10, 6); // установим 6 ноября 2025 года
+// let day  = date.getDay();
+// let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+// console.log(days[day]);
+
+
+// Узнайте, какой день недели был в ваш день рождения.
+// let date = new Date(1997, 8, 12); 
+// let day  = date.getDay();
+// let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+// console.log(days[day]);
+
+
+//Выведите на экран количество дней, прошедшее между 1 марта 1998 года и 10 января 2000 года.
+// let date1 = new Date(1998,2,1);
+// let date2= new Date(2000,0,10);
+// let diff = date2.getTime() - date1.getTime();
+// console.log(diff/(1000*60*60*24));
+
+
+//
+//Выведите на экран количество миллисекунд, прошедшее между 1 сентября 2000 года и 15 февраля 2010 года.
+
+// let date1 = new Date(2010,1,15);
+// let date2 = new Date(2000,8,1);
+// let diff = date1 - date2;
+// console.log(diff/(1000*60*60*24*30*12));
+
+
+// let date = new Date(2018, -12, -33);
+// console.log(date)
+
+let date = new Date(2018, 0, 1, 23, 0, 60);
+console.log(date);
 
