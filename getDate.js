@@ -112,6 +112,84 @@
 // let date = new Date(2018, -12, -33);
 // console.log(date)
 
-let date = new Date(2018, 0, 1, 23, 0, 60);
-console.log(date);
+// let date = new Date(2018, 0, 1, 23, 0, 60);
+// console.log(date);
 
+
+// узнать високовсный ли год по февралю
+// let date = new Date(2012, 2, 0);
+// let x = date.getDate();
+//         let day1 = 28;
+//        if(x == day1){
+//             console.log("год не высокосный - 28 дней в феврале")
+//         }else{
+//             console.log("год высокосный - 29 дней в феврале")
+//         }
+
+
+
+//Нахождение последнего дня месяца
+//         function getLastDay(month, year) { // функция должна принимать и год
+//             let lastDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //(lastDays[0]); кол-во дней в феврале
+//             if (month != 1) {
+//                 return lastDays[month]; // если не февраль
+//             } else {
+//                 // определяем кол-во дней в феврале по году и месяцу
+//                 let date = new Date(year, month + 1, 0);
+//                  return date.getDate();
+//                 }
+//             }
+//             console.log(getLastDay(1,2012));
+
+// //ИЛИ
+
+//         function getLastDayOfMonth(year, month) {
+//             let date = new Date(year, month + 1, 0);
+//             return date.getDate();
+//           }        
+//     console.log(getLastDayOfMonth(2012, 0) ); // 31
+//          console.log( getLastDayOfMonth(2010, 1) ); // 28
+
+//Сделайте функцию isLeap, которая параметром будет принимать год и возвращать true, если этого год високосный,
+//и false - если нет.
+
+//
+// let year  = 2025;
+// let month = 0;
+// let day   = 32;
+
+// let date = new Date(year, month, day);
+
+// if (date.getFullYear() == year && date.getMonth() == month && date.getDate() == day) {
+// 	console.log('корректна');
+// } else {
+// 	console.log('некорректна');
+// }
+
+
+//Определите, какой день недели будет 31 декабря текущего года.
+// let date = new Date();
+// let day = new Date(date.getFullYear(),11,31);
+// console.log(day.getDay());
+
+
+
+///
+// let now  = new Date(); // получаем текущий момент
+// let date1 = new Date(now.getFullYear(), 6, 6); // получаем нашу дату
+// //Полученный момент времени мы можем использовать, например, чтобы определить день недели, соответствующий этой дате:
+// console.log(date1.getDay())
+
+// let now  = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth(), 25);
+// console.log(date.getDay())
+
+//
+// let now = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth() - 6, 0);
+// console.log(date);
+
+//Определите, какой день недели был месяц назад в такой же день месяца, как сегодня.
+let now = new Date();
+let date = new Date(now.getFullYear(),now.getMonth()-1,6);
+console.log(date.getDay());
