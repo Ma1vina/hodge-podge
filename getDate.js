@@ -190,6 +190,22 @@
 // console.log(date);
 
 //Определите, какой день недели был месяц назад в такой же день месяца, как сегодня.
-let now = new Date();
-let date = new Date(now.getFullYear(),now.getMonth()-1,6);
-console.log(date.getDay());
+// let now = new Date();
+// let date = new Date(now.getFullYear(),now.getMonth()-1,6);
+// console.log(date.getDay());
+
+
+//Определите, сколько дней между 1 января и 1 сентября текущего года.
+// let now = new Date();
+// let date1 = (new Date(now.getFullYear(),0,1));
+// let date2 = (new Date(now.getFullYear(),8,1));
+// let diff = date2 - date1
+// console.log(diff/(1000*60*60*24));
+
+
+//Определите, сколько дней между 20 числом текущего месяца и 10 числом следующего.
+// let now = new Date();
+// let date1 = (new Date(now.getFullYear(),now.getMonth(),20));
+// let date2 = (new Date(now.getFullYear(),now.getMonth()+1,10));
+// let diff = date2 - date1
+// console.log(diff/(1000*60*60*24));
