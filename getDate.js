@@ -209,3 +209,84 @@
 // let date2 = (new Date(now.getFullYear(),now.getMonth()+1,10));
 // let diff = date2 - date1
 // console.log(diff/(1000*60*60*24));
+
+
+//Момент времени дня
+// let now  = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+// console.log(date);
+
+
+// Определите, сколько часов прошло между вчерашним полднем и текущим моментом времени.
+// let now  = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1, 12);
+// let date2 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+// let diff = date2 - date;
+// console.log(diff/(1000*60*60));
+
+// Определите, сколько часов осталось до конца дня.
+// let now  = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(),  24, 0, 0);
+// let date2 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+// let diff = date - date2;
+// console.log(diff/(1000*60*60));
+
+
+//
+//найдем все первые числа месяцев текущего года, которые являются воскресеньем:
+// let now  = new Date();
+// let year = now.getFullYear();
+
+// for (let month = 0; month <= 11; month++) {
+// 	let date = new Date(year, month, 1);
+	
+// 	if (date.getDay() == 0) {
+// 		console.log(year + '-' + month + '-1');
+// 	}
+// }
+
+
+// Рассмотрите промежуток от 2000 года до текущего года. Определите, сколько раз 1 января в этом промежутке
+// попадало на выходной день, то есть на субботу или на воскресенье.
+// let now = new Date();
+// let nowYear = now.getFullYear();
+// let x = 0;
+// for(let year = 2000; year<nowYear; year++){
+//     let date = new Date(year,0,1);
+//     if(date.getDay() == 6 || date.getDay() == 0){
+//         x++;
+// 	}
+// }
+// console.log(x);
+
+
+// Определите, сколько секунд прошло с начала дня до настоящего момента времени.
+// let now = new Date();
+// let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+// let date2 = new Date(now.getFullYear(), now.getMonth(), now.getDate(),0,0,0);
+// let diff = date1 - date2;
+// console.log(diff/(1000));
+
+///Определите, сколько дней осталось до нового года.
+// let now = new Date();
+// let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+// let date2 = new Date(2023,0,1);
+// let diff = date2 - date1;
+// console.log(diff/(1000*60*60*24));
+
+//Определите, сколько пятниц 13-е в текущем году.
+// let now = new Date();
+//  let year = new Date(now.getFullYear());
+// let x = 0;
+// for(let month=0;month<=11;month++){
+//     let date = new Date(year, month,13);
+//     if(date.getDay() == 5){
+//         x++;
+//     }
+// }
+// console.log(x);
+
+//Определите, какой год был 9 месяцев назад.
+let now = new Date();
+let date2 = new Date(now.getFullYear(), now.getMonth()-9);
+console.log(date2.getFullYear());
