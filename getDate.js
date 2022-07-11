@@ -148,7 +148,7 @@
 //             return date.getDate();
 //           }        
 //     console.log(getLastDayOfMonth(2012, 0) ); // 31
-//          console.log( getLastDayOfMonth(2010, 1) ); // 28
+//     console.log( getLastDayOfMonth(2010, 1) ); // 28
 
 //Сделайте функцию isLeap, которая параметром будет принимать год и возвращать true, если этого год високосный,
 //и false - если нет.
@@ -287,6 +287,93 @@
 // console.log(x);
 
 //Определите, какой год был 9 месяцев назад.
-let now = new Date();
-let date2 = new Date(now.getFullYear(), now.getMonth()-9);
-console.log(date2.getFullYear());
+// let now = new Date();
+// let date2 = new Date(now.getFullYear(), now.getMonth()-9);
+// console.log(date2.getFullYear());
+
+// Определите, какой день недели будет в последнем дне текущего месяца.
+// let now = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth()+1,0);
+// console.log(date.getDay());
+
+// Напишите код, который будет определять, високосный ли текущий/любой год.
+
+// function checkLeapYear(year) {
+
+//     const leap = new Date(year, 1, 29);
+//     if (leap.getDate() === 29) {
+//         console.log(year + ' высокосный');
+//     } else {
+//         console.log(year + ' не высокосный');
+//     }
+// }
+// checkLeapYear(2024);
+// //
+//ТЕКУЩИЙ:
+// let now = new Date();
+// let date = new Date( now.getFullYear(), 1, 29);
+// if(date.getDate()=== 29){
+//     console.log("текущий год високосный");
+// }else{
+//     console.log("текущий год не високосный");
+// }
+
+//Напишите код, который сравнит две приведенные ниже даты и выведет сообщение о том, какая из них больше:
+// let date1 = '2020-11-31';
+// let date2 = '2020-12-01';
+// if(date1<date2){
+//     console.log("date2 больше")
+// }else{
+//     console.log("date1 больше")
+// }
+
+// Получите объект с датой, содержащий текущий момент времени. Получите объект с датой, содержащий полдень текущего дня.
+//  Сравните два этих объекта и определите, был ли уже полдень или нет.
+// let now = new Date();
+// let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+// let date2 = new Date(now.getFullYear(), now.getMonth(), now.getDate(),12,0,0);
+// if(date2>date){
+// console.log("полдень ещё не наступил");
+// }else{
+//     console.log("полдень уже наступил")
+// }
+
+// Получите объект с датой, содержащий текущий момент времени. Получите объект с датой, содержащий 15 число текущего месяца.
+//  Сравните два этих объекта и определите, прошла ли уже половина месяца или нет.
+// let now = new Date();
+//  let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(),now.getMinutes(),now.getSeconds());
+//  let date2 = new Date(now.getFullYear(), now.getMonth(),15);
+//  if(date<date2){
+//     console.log("половина не прошла")
+//  }else{
+//     console.log("половина прошла")
+//  }
+
+//сколько дней осталось до какого-нибудь праздника, например, до ближайшего Женского дня
+// let now  = new Date();
+// let date = new Date(now.getFullYear(), 2, 8); // текущий год
+
+// let diff = date - now; // разница
+// if (diff > 0) {
+// 	console.log("еще будет")
+// } else if (diff == 0) {
+// 	console.log("сегодня")
+// } else {
+// 	console.log("в следующем году")
+// }
+
+//  Определите, сколько дней осталось до вашего ближайшего дня рождения.
+let now  = new Date();
+let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+let date = new Date(now.getFullYear(), 6, 10);
+let diff = date - date1;
+if (diff > 0) {
+   	console.log(diff/(1000*60*60*24) + "осталось дней")
+}else{
+if (diff == 0) {
+    console.log("0");
+} else {
+    date = new Date(now.getFullYear()+1, 6, 10);
+
+    }
+}
