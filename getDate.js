@@ -363,17 +363,43 @@
 // }
 
 //  Определите, сколько дней осталось до вашего ближайшего дня рождения.
-let now  = new Date();
-let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-let date = new Date(now.getFullYear(), 6, 10);
-let diff = date - date1;
-if (diff > 0) {
-   	console.log(diff/(1000*60*60*24) + "осталось дней")
-}else{
-if (diff == 0) {
-    console.log("0");
-} else {
-    date = new Date(now.getFullYear()+1, 6, 10);
+// let now  = new Date();
+// let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+// let date = new Date(now.getFullYear(), 6, 10);
+// let diff = date - date1;
+// if (diff > 0) {
+//    	console.log(diff/(1000*60*60*24) + "осталось дней")
+// }else{
+// if (diff == 0) {
+//     console.log("0");
+// } else {
+//     date = new Date(now.getFullYear()+1, 6, 10);
+//    let x = date - date1;
+//    console.log(x/(1000*60*60*24))
+//     }
+// }
 
-    }
-}
+// Пусть теперь День Рождения может быть произвольным и содержится в переменных month и day. Определите, сколько дней
+//  осталось до заданного этой датой праздника. Учтите при решении, что есть счастливчики, которые родились 29 февраля.
+//   Не забудьте их учесть в вашем решении.
+
+// function getdaysHappyBirthDay (month,day){
+//     let now  = new Date();
+//     let date1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//     let date = new Date(now.getFullYear(), month,day);
+//     let diff = date - date1;
+//      if (diff > 0) {
+//    	console.log(diff/(1000*60*60*24) + " осталось дней/дня")
+// }else{
+//     if (diff == 0) {
+//             console.log("0");
+//         } else {
+//             date = new Date(now.getFullYear()+1, month, day);
+//            let x = date - date1;
+//            console.log(x/(1000*60*60*24))
+//             }
+//         }
+// }
+
+// getdaysHappyBirthDay(6,12);
+
