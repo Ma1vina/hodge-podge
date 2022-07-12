@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+		<!-- // Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом),
+//  который приходится на эту дату. -->
+
+
+<input type="text" id="inp">
+<input type="submit" id="btn">
+<p id="text"></p> 
+
+    <script>
+        let inp = document.querySelector("#inp");
+        let btn = document.querySelector("#btn");
+        let p = document.querySelector("p")
+
+btn.addEventListener("click", func);
+
+
+function func(){
+    var text = inp.value
+    var days = ["вс", 'пн' , 'вт' ,"cр",'чт' , 'пт', 'сб'];
+    var arr = text.split(".").reverse().join(",")
+    
+
+   var date = new Date(arr);
+   var day = date.getDay();
+   p.innerHTML = days[day];
+   
+
+}
+
+
+
+ 
+    </script>
+    
+</body>
+</html>
