@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JSON</title>
+</head>
+<body>
+    <div id="list"></div>
+   
+
+    <script>
+            var div = document.querySelector('list');
+            var ul = document.createElement('ul');
+            var li = document.createElement('li');
+
+ 
+
+            div.appendChild(ul);
+var data = ["Первая строка", "Вторая строка", "n строка"];
+for (var i = 0, ln = data.length; i < ln; i++) {
+  var li = document.createElement('li');
+
+  li.innerHTML = data[i];
+
+  ul.appendChild(li);
+
+}
+
+</script>
+
+</body>
+</html>
