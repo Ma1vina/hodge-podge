@@ -2,10 +2,11 @@
 // из value инпута, а 'John' и 'Smit' должны быть параметрами функциями.
 
 let elem = document.querySelector('#elem');
-
-function func(surname, name) {
-	console.log(this.value + ', ' + name + ' ' + surname);
-}
-let param1 = "john"
+let p =document.querySelector("p")
+let param1 = "john";
 let param2 = "smit"
-alert(func.call(elem, param1, param2));
+function func(param1, param2) {
+	console.log(this.value +", " + param1 + " " + param2);
+}
+(func.call(elem, param1, param2));
+ 
