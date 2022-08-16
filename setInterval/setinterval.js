@@ -79,23 +79,145 @@
 
 // 7
 // по нажатию на кнопку запускает таймер, выводящий в консоль текущий момент времени:
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+// let timerId;
+
+// start.addEventListener('click', function func() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getHours() + ":" + date.getMinutes() + ':' + date.getSeconds());
+// 	}, 1000);
+//     this.removeEventListener("click",func)
+// });
+
+// stop.addEventListener('click', function() {
+// 	clearInterval(timerId);
+//     //привязать продолжение таймера
+// });
+
+// 8
+// elem.addEventListener('click', function() {
+// 	let self = this;
+	
+// 	setInterval(function() {
+// 		console.log(self.value);
+// 	}, 1000);
+// });
 
 
-let start = document.querySelector('#start');
-let stop  = document.querySelector('#stop');
-let timerId;
+// 9
+// Автор кода хотел, чтобы по нажатию на кнопку, значение этой кнопки каждую секунду увеличивалось на 1. Однако,
+//  по нажатию на кнопку вообще ничего не происходит. Исправьте ошибку автора кода. Напишите текст, в котором вы дадите
+//   объяснение автору кода, почему возникла его ошибка.
+// let elem = document.querySelector('#elem');
 
-start.addEventListener('click', function func() {
-	timerId = setInterval(function() {
-		let date = new Date;
-		console.log(date.getHours() + ":" + date.getMinutes() + ':' + date.getSeconds());
-	}, 1000);
-    this.removeEventListener("click",func)
-    this.addEventListener('click',func)
-});
+// elem.addEventListener('click', function() {
+//     let self = this;
+// 	setInterval(function() {
+// 		self.value = Number(elem.value) + 1;
+// 	}, 1000);
+// });
 
-stop.addEventListener('click', function() {
-	clearInterval(timerId);
-});
+//или через стрелочную
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('click', function() {
+//     let self = this;
+// 	setInterval(() => self.value = Number(elem.value) + 1, 1000);
+// });
 
+//или через замыкание
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	function func(self) {
+// 		return function() {
+// 		return self.value = Number(elem.value) + 1;
+// 		}
+// 	}
+	
+// 	setInterval(func(this), 1000);
+// });
+
+// или передать контекст через параметр
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	setInterval(func, 1000, this); // параметром передаем this
+	
+// 	function func(self) { // в self попадает this
+// 		console.log(self.value);
+// 	}
+// });
+
+//Сделаем более компактное решение через анонимную функцию:
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	setInterval(function(self) {
+// 		console.log(self.value);
+// 	}, 1000, this);
+// });
+
+// 9
+// Автор кода хотел, чтобы по нажатию на кнопку, значение этой кнопки каждую секунду уменьшалось на 1. Однако, по нажатию
+//  на кнопку вообще ничего не происходит. Исправьте ошибку автора кода, используя изученный в данном уроке способ.
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	setInterval(function(self) {
+// 		self.value = Number(self.value)-1;
+// 	}, 1000, this);
+// });
+
+// 10
+// Дана кнопка. Дан абзац, текстом которого является число. По нажатию на кнопку запустите таймер, который каждую секунду
+//  будет увеличивать текст абзаца на 1
+
+// let btn = document.querySelector("input");
+// let p = document.querySelector("p");
+
+// btn.addEventListener("click", function(){
+//     setInterval(function(){
+//         p.innerHTML = Number(p.innerHTML) + 1
+//     },1000);
+// })
+
+// 11
+// Дана кнопка. Дан абзац, текстом которого является число, например, 10. По нажатию на кнопку запустите таймер, который
+//  каждую секунду будет уменьшать текст абзаца на 1. Как только значение абзаца станет равно нулю - остановите таймер.
+
+// let btn = document.querySelector("input");
+// let p = document.querySelector("p");
+// let timerId;
+
+// btn.addEventListener("click", function(){
+//    timerId = setInterval(function(){
+//         p.innerHTML = Number(p.innerHTML)-1;
+        
+//         if(Number(p.innerHTML) <= 0){
+//             clearInterval(timerId);
+//         }
+//                          },1000);
+//       });
+
+// 12
+// Дан инпут с числом. Сделайте так, чтобы каждую секунду в нем появлялся квадрат того числа, которое в нем записано.
+// let elem = document.querySelector("input");
+//  setInterval(function(){
+//     elem.value = (Number(elem.value))**2
+// },1000);
+
+
+// 13
+// Дан инпут. В него вводится число. По потери фокуса сделайте так, чтобы в абзаце ниже начал тикать обратный отсчет, 
+// начиная с введенного числа. Когда отсчет дойдет до нуля - он должен закончится
+
+let elem = document.querySelector("input");
+let p = document.querySelector("p");
+elem.addEventListener("blur",function(){
+  let 
+})
 
