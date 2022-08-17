@@ -215,9 +215,71 @@
 // Дан инпут. В него вводится число. По потери фокуса сделайте так, чтобы в абзаце ниже начал тикать обратный отсчет, 
 // начиная с введенного числа. Когда отсчет дойдет до нуля - он должен закончится
 
-let elem = document.querySelector("input");
+// let input = document.querySelector('#result'),
+//     sec = document.querySelector('#sec');
+ 
+// input.addEventListener('focusout',()=> {
+//     sec.textContent = +input.value+1;
+//     timer();
+// });
+ 
+// function timer(){
+//     if(sec.textContent > 0){
+//         setTimeout(timer,1000);
+//         sec.textContent = --sec.textContent;
+//     }
+//     else sec.textContent = 'Конец';
+// }
+
+// 14
+// Дан инпут, кнопка и абзац. В инпут вводится какое-то число. По нажатию на кнопку запишите введенное число в текст
+//  абзаца и запустите обратный отсчет в абзаце: пусть каждую секунду число в абзаце уменьшается на единицу, пока не дойдет
+//   до нуля.
+// let inp = document.querySelector("input");
+// let btn = document.querySelector("button");
+// let p = document.querySelector("p");
+
+// btn.addEventListener("click",function(){
+// p.textContent = (Number(inp.value))+1;
+// func();
+// })
+
+// function func(){
+//   if(p.textContent > 0){
+//             setTimeout(func,1000);
+//            p.textContent = --p.textContent;
+//         }
+// }
+
+// 15
+// Дан абзац и две кнопки. Сделайте так, чтобы по нажатию на первую кнопку в абзаце начал тикать таймер от 1 до 
+// бесконечности, а по нажатию на вторую таймер останавливался.
+
+// let p = document.querySelector("p");
+// let btn1=document.querySelector("#btn1");
+// let btn2= document.querySelector("#btn2");
+// let timerId;
+
+// btn1.addEventListener("click", function(){
+//   timerId = setInterval(function(){
+//     p.innerHTML = +p.innerHTML +1;
+//   },1000)
+// })
+
+// btn2.addEventListener("click",function(){
+//   clearInterval(timerId);
+// });
+
+// 16
+// Дан абзац. Сделайте так, чтобы каждую секунду он менял свой цвет с красного на зеленый и наоборот.
 let p = document.querySelector("p");
-elem.addEventListener("blur",function(){
-  let 
-})
+
+setInterval(function(){
+    if(p.style.color =='red') {
+      p.style.color = 'green';
+     } else {
+      p.style.color ='red';
+    }
+    },1000)
+
 
