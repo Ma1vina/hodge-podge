@@ -272,14 +272,39 @@
 
 // 16
 // Дан абзац. Сделайте так, чтобы каждую секунду он менял свой цвет с красного на зеленый и наоборот.
-let p = document.querySelector("p");
+// let p = document.querySelector("p");
 
-setInterval(function(){
-    if(p.style.color =='red') {
-      p.style.color = 'green';
+// setInterval(function(){
+//     if(p.style.color =='red') {
+//       p.style.color = 'green';
+//      } else {
+//       p.style.color ='red';
+//     }
+//     },1000)
+
+// 17
+// Если выводить на экран каждую секунду текущий момент времени, то можно сделать тикающие часы. Реализуйте такие же
+//  часики, как показано ниже в образце:
+let clock = document.querySelector("div");
+
+setInterval(function() {
+let date = new Date();
+let hour = addZero(date.getHours());
+let min = addZero(date.getMinutes());
+let sec = addZero(date.getSeconds());
+
+clock.innerHTML = hour + ':' + min + ':' + sec;
+}, 1000);
+
+   function addZero(num) {
+     if (num <= 9) {
+       return '0' + num;
      } else {
-      p.style.color ='red';
-    }
-    },1000)
+       return num;
+     }
+   }
+ 
+
+
 
 
