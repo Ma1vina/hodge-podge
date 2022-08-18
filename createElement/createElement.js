@@ -99,3 +99,33 @@
 //  	parent.appendChild(inp);
 // }
 
+// 9
+// удаление по клику
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		elem.remove();
+// 	});
+// }
+
+// 10
+// Сделайте так, чтобы любая li удалялась по клику на нее.
+// let elems = document.querySelectorAll("li");
+// for(let elem of elems) {
+//     elem.addEventListener("click", function(){
+//         elem.remove();
+//     });
+// };
+
+// 11
+// Сделайте так, чтобы по каждому клику на кнопку удалялся последний элемент из #parent.
+let btn = document.querySelector("#button")
+let parent = document.querySelector("#parent")
+let elem  = document.querySelector("li");
+
+
+    btn.addEventListener("click",function(){
+       
+        
+    })
