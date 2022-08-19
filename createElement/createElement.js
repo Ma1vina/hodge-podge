@@ -131,11 +131,69 @@
 
 // 12
 // Вставьте ему в начало элемент с текстом 'start', а в конец - элемент с текстом 'finish'.
-let elem = document.querySelector("#elem");
-let firstChild = document.createElement("li");
-firstChild.innerHTML = "start";
-elem.prepend(firstChild);
+// let elem = document.querySelector("#elem");
+// let firstChild = document.createElement("li");
+// firstChild.innerHTML = "start";
+// elem.prepend(firstChild);
 
-let lastChild = document.createElement("li");
-lastChild.innerHTML = "finish";
-elem.append(lastChild);
+// let lastChild = document.createElement("li");
+// lastChild.innerHTML = "finish";
+// elem.append(lastChild);
+
+// 13
+//Вставьте перед этим элементом элемент с текстом 'new'.
+// let parent = document.querySelector("#parent");
+// let elem = document.querySelector("#elem");
+
+// let newLi = document.createElement('li');
+// newLi.innerHTML = "new";
+// parent.insertBefore(newLi,elem);
+
+// 14
+// Модифицируйте предыдущую задачу так, чтобы клик на вставленный элемент приводил к тому, что в конец его текста
+//  будет добавляться '!'.
+// let parent = document.querySelector("#parent");
+// let elem = document.querySelector("#elem");
+
+// let newLi = document.createElement('li');
+// newLi.innerHTML = "new";
+// parent.insertBefore(newLi,elem);
+
+// newLi.addEventListener("click", function(){
+//     newLi.innerHTML = newLi.innerHTML + "!"
+// });
+
+// 15
+// Вставьте перед ним абзац с текстом '!!!'.
+// let elem = document.querySelector("#elem");
+// let p = document.createElement("p");
+// p.innerHTML = "!!!"
+// elem.insertAdjacentElement("beforebegin", p);
+
+// 16
+// Вставьте после него абзац с текстом '!!!'.
+// let elem = document.querySelector("#elem");
+// let p = document.createElement("p");
+// p.innerHTML = "!!!"
+// elem.insertAdjacentElement("afterend", p);
+
+// 17
+// Вставьте ему в начало абзац с текстом '!!!'.
+// let elem = document.querySelector("#elem");
+// let p = document.createElement("p");
+// p.innerHTML = "!!!"
+// elem.insertAdjacentElement("afterbegin", p);
+
+// 18
+//Вставьте ему в конец абзац с текстом '!!!'.
+// let elem = document.querySelector("#elem");
+// let p = document.createElement("p");
+// p.innerHTML = "!!!"
+// elem.insertAdjacentElement("beforeend", p);
+
+// 19
+// Дан элемент. Вставьте перед ним следующий тег:
+// <div class="www"><p>text</p><p>text</p><input></div>
+
+let elem = document.querySelector("#elem");
+elem.insertAdjacentHTML("beforebegin","<div><p>text</p><p>text</p><input></div>");
