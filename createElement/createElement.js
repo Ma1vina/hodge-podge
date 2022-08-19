@@ -120,12 +120,22 @@
 
 // 11
 // Сделайте так, чтобы по каждому клику на кнопку удалялся последний элемент из #parent.
-let btn = document.querySelector("#button")
-let parent = document.querySelector("#parent")
-let elem  = document.querySelector("li");
+// let btn = document.querySelector("#button")
+// let parent = document.querySelector("#parent")
+// let elem  = document.querySelector("li");
 
 
-    btn.addEventListener("click",function(){
-       
-        
-    })
+//     btn.addEventListener("click",function(){
+//        parent.removeChild(parent.lastElementChild); 
+//     });
+
+// 12
+// Вставьте ему в начало элемент с текстом 'start', а в конец - элемент с текстом 'finish'.
+let elem = document.querySelector("#elem");
+let firstChild = document.createElement("li");
+firstChild.innerHTML = "start";
+elem.prepend(firstChild);
+
+let lastChild = document.createElement("li");
+lastChild.innerHTML = "finish";
+elem.append(lastChild);
