@@ -195,5 +195,61 @@
 // Дан элемент. Вставьте перед ним следующий тег:
 // <div class="www"><p>text</p><p>text</p><input></div>
 
-let elem = document.querySelector("#elem");
-elem.insertAdjacentHTML("beforebegin","<div><p>text</p><p>text</p><input></div>");
+// let elem = document.querySelector("#elem");
+// elem.insertAdjacentHTML("beforebegin","<div><p>text</p><p>text</p><input></div>");
+
+
+// 20
+//  Клонирование элем.Сделаем копию блока с классом elem и вставим его в конец блока #parent:
+// let parent = document.querySelector('#parent');
+// let elem = parent.querySelector('.elem');
+
+// let clone = elem.cloneNode(true);
+// parent.appendChild(clone);
+
+// 21
+// Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.
+// let inp = document.querySelector('input');
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", function(){
+//     let clone = inp.cloneNode(true);
+//     btn.insertAdjacentElement("beforebegin",clone);
+// });
+
+// 22
+// Проверьте, является ли этот элемент абзацем.
+// let p = document.querySelector("p");
+// console.log(p.matches("p"));
+
+// 23
+// добавление элементов из массива
+// let arr = [1, 2, 3, 4, 5];
+
+// let parent = document.querySelector('#parent');
+
+// for (let elem of arr) {
+// 	let p = document.createElement('p');
+// 	p.textContent = elem;
+	
+// 	parent.appendChild(p);
+// }
+
+
+// 24
+// Модифицируйте код так, чтобы по клику на абзац к его содержимому прибавлялась единица.
+let arr = [1, 2, 3, 4, 5];
+
+let parent = document.querySelector('#parent');
+
+for (let elem of arr) {
+	let p = document.createElement('p');
+	p.textContent = elem;
+	
+	parent.appendChild(p);
+
+    p.addEventListener("click",function(event){
+        event.target.innerHTML = +event.target.innerHTML + 1
+    })
+}
+
