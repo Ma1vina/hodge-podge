@@ -238,18 +238,18 @@
 
 // 24
 // Модифицируйте код так, чтобы по клику на абзац к его содержимому прибавлялась единица.
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-let parent = document.querySelector('#parent');
+// let parent = document.querySelector('#parent');
 
-for (let elem of arr) {
-	let p = document.createElement('p');
-	p.textContent = elem;
+// for (let elem of arr) {
+// 	let p = document.createElement('p');
+// 	p.textContent = elem;
 	
-	parent.appendChild(p);
+// 	parent.appendChild(p);
 
-    p.addEventListener("click",function(event){
-        event.target.innerHTML = +event.target.innerHTML + 1
-    })
-}
+//     p.addEventListener("click",function(event){
+//         event.target.innerHTML = +event.target.innerHTML + 1
+//     })
+// };
 
