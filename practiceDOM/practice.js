@@ -36,25 +36,70 @@
 // Сделайте так, чтобы по клику на кнопку в список добавлялся новый элемент. Сделайте так, чтобы любая li удалялась 
 // по клику на нее. Речь идет как о тех li, которые уже есть в списке, так о новых, созданных после нажатия на кнопку.
 
-let parent =document.querySelector("#parent");
-let btn = document.querySelector("#button");
-let liAll = document.querySelectorAll("li");
-let i = 4;
+// let parent =document.querySelector("#parent");
+// let btn = document.querySelector("#button");
+// let liAll = document.querySelectorAll("li");
+// let i = 4;
 
-btn.addEventListener('click', function(){
-    let li = document.createElement("li");
-    li.textContent = i;
-    i++;
-    parent.appendChild(li);
-});
+// btn.addEventListener('click', function(){
+//     let li = document.createElement("li");
+//     li.textContent = i;
+//     i++;
+//     parent.appendChild(li);
+// });
 
-parent.addEventListener("click", function(event){
-    var li = event.target.closest("li");
+// parent.addEventListener("click", function(event){
+//     var li = event.target.closest("li");
 
-	if (li) {
-		li.remove(); 
-	}
-});
+// 	if (li) {
+// 		li.remove(); 
+// 	}
+// });
+
+// 4
+//удаление ссылки
+// let elem   = document.querySelector('#elem');
+// let remove = document.querySelector('#remove');
+
+// remove.addEventListener('click', function() {
+// 	elem.remove();
+// });
+
+// 5
+// cоздание ссылок на удаление
+// let elems = document.querySelectorAll('#parent p');
+
+// for (let elem of elems) {
+// 	let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+// 	elem.appendChild(remove);
+	
+// 	remove.addEventListener('click', function(event) {
+// 		elem.remove();
+// 		event.preventDefault();
+// 	});
+// }
+
+// 6
+// Дан тег ul. Добавьте в конец каждого тега li ссылку на удаления этого li из списка.
+let liAll = document.querySelectorAll("#parent li");
+
+for(let li of liAll){
+    let remove = document.createElement("a");
+    remove.href = "";
+    remove.textContent = "удалить"
+    li.appendChild(remove);
+
+    remove.addEventListener("click", function(event){
+   li.remove();
+   event.preventDefault()
+    })
+}
+
+
+
+
 
 
 

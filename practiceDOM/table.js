@@ -150,3 +150,16 @@
 // 	td.textContent = '!';
 // }
 
+// 9
+// Дана HTML таблица. Добавьте в нее еще одну колонку, в которой для каждого ряда таблицы будет стоять ссылка на
+//  удаление этого ряда.
+
+let btn = document.querySelector("#button")
+let trAll = document.querySelector("#table tr");
+
+btn.addEventListener("click",function(){
+for(let tr of trS){
+        let td = document.createElement("td");
+        tr.appendChild(td);
+}
+    })
