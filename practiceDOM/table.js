@@ -153,13 +153,25 @@
 // 9
 // Дана HTML таблица. Добавьте в нее еще одну колонку, в которой для каждого ряда таблицы будет стоять ссылка на
 //  удаление этого ряда.
+// let trS = document.querySelectorAll("#table tr");
+// let btn= document.querySelector("#button");
+// let table = document.querySelector('#table');
 
-let btn = document.querySelector("#button")
-let trAll = document.querySelector("#table tr");
+// btn.addEventListener("click",function(event){
+// for(let tr of trS){
+//     let td = document.createElement("td");
+//     tr.appendChild(td);
 
-btn.addEventListener("click",function(){
-for(let tr of trS){
-        let td = document.createElement("td");
-        tr.appendChild(td);
-}
-    })
+//         let remove = document.createElement("a");
+//             remove.href = "";
+//             remove.textContent = "удалить"
+//             td.appendChild(remove);
+// }
+// table.appendChild(tr);
+// })
+
+
+// var len = table.tr.length; 
+// for(var i=0; i<len; i++){ t
+//   table.deleteRow(0); 
+// }

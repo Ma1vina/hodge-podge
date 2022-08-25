@@ -83,24 +83,73 @@
 
 // 6
 // Дан тег ul. Добавьте в конец каждого тега li ссылку на удаления этого li из списка.
-let liAll = document.querySelectorAll("#parent li");
+// let liAll = document.querySelectorAll("#parent li");
 
-for(let li of liAll){
-    let remove = document.createElement("a");
-    remove.href = "";
-    remove.textContent = "удалить"
-    li.appendChild(remove);
+// for(let li of liAll){
+//     let remove = document.createElement("a");
+//     remove.href = "";
+//     remove.textContent = "удалить"
+//     li.appendChild(remove);
 
-    remove.addEventListener("click", function(event){
-   li.remove();
-   event.preventDefault()
-    })
-}
-
-
+//     remove.addEventListener("click", function(event){
+//    li.remove();
+//    event.preventDefault()
+//     })
+// }
 
 
+// 7
 
+// let elem = document.querySelector('#elem');
+// let input = document.querySelector('#input');
+
+// input.value = elem.textContent; // записываем в инпут текст абзаца
+
+// input.addEventListener('keypress', function() {
+// 	elem.textContent = this.value;
+// });
+
+// Модифицируйте приведенный выше код так, чтобы текст абзаца менялся не по потери фокуса, а по мере ввода текста в инпут.
+
+
+
+// // 8
+// создание инпута по клику на абзац. затем по потери фокуса в инпуте меняетсяся текст абзаца
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+	
+// 	input.addEventListener('blur', function() {
+// 		elem.textContent = this.value;
+// 		this.remove(); // удалим инпут
+// 	});
+	
+// 	elem.parentElement.appendChild(input);
+// });
+
+
+// 9
+// Давайте теперь сделаем так, чтобы при редактировании инпут появлялся в самом абзаце - вместо текста этого абзаца.
+//  Пусть затем при окончании редактирования инпут будет убираться, а вместо него опять появляться текст абзаца.
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function func() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+	
+// 	elem.textContent = '';
+// 	elem.appendChild(input);
+	
+// 	input.addEventListener('blur', function() {
+// 		elem.textContent = this.value;
+// 		elem.addEventListener('click', func); // повесим событие обратно
+// 	});
+	
+// 	elem.removeEventListener('click', func);
+// });
 
 
 
