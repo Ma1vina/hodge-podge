@@ -1,0 +1,20 @@
+
+
+.hidden {
+	display: none;
+} 
+
+.active {
+	background: red;
+}
+
+.color1 {
+	background: red;
+}
+.color2 {
+	background: green;
+}
+
+.color3 {
+	background: yellow;
+}

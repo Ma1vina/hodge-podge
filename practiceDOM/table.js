@@ -200,3 +200,66 @@
 //     })
 // }
 
+
+// 11
+//  Активация элемента. По клику на нее, активировать ячейку, перекрасив в красный
+
+// let tds = document.querySelectorAll('#table td');
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		this.classList.add('active');
+// 	});
+// }
+
+//Модифицируйте предыдущую задачу так, чтобы по нажатию на активированный пункт списка активация с него снималась.
+// let tds = document.querySelectorAll('#table td');
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function func() {
+// 		this.classList.add('active');
+
+//         td.addEventListener('click', function(){
+//          this.classList.remove("active");  
+
+//          td.addEventListener('click',func);
+//         })
+//         td.removeEventListener("click", func);
+// 	});
+
+// }
+
+
+// 12
+// чередование цветов: пусть первая ячейка красится в красный, вторая - в зеленый, третья - опять в красный
+// let tds = document.querySelectorAll('#table td');
+
+// let color = 'color1';
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		if (color == 'color1') {
+// 			color = 'color2'
+// 		} else {
+// 			color = 'color1'
+// 		}
+		
+// 		this.classList.add(color);
+// 	});
+// }
+
+// произвольное кол-во цветов
+// let tds = document.querySelectorAll('#table td');
+
+// let i = 0;
+// let colors = ['color1', 'color2', 'color3'];
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		this.classList.add(colors[i]);
+		
+// 		i++;
+// 		if (i == colors.length) {
+// 			i = 0;
+// 		}
+// 	});
+// }
