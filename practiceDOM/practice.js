@@ -151,6 +151,69 @@
 // 	elem.removeEventListener('click', func);
 // });
 
+// 10
+// Дан тег ul. Сделайте так, чтобы по клику на любую li в ней появлялся инпут, с помощью которого можно
+//  будет поредатировать текст этой li.
+
+// let elems = document.querySelectorAll('li');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		let input = document.createElement('input');
+// 		input.value = elem.textContent;
+		
+// 		elem.textContent = '';
+// 		elem.appendChild(input);
+		
+// 		input.addEventListener('blur', function() {
+// 			elem.textContent = this.value;
+// 			elem.addEventListener('click', func);
+// 		});
+		
+// 		elem.removeEventListener('click', func);
+// 	});
+// }
 
 
+// 11
+// Оберните сначала текст абзаца в теги span, добавьте к этим тегам возможность редактирования, а затем добавьте в конец
+//  каждого абзаца ссылку на удаление.
+// let parent = document.querySelector("#parent");
+// // let p = document.querySelector('p')
+// let pAll = document.querySelectorAll("#parent p");
 
+// for(let p of pAll){
+//     p.addEventListener("click", function func(){
+//         p.innerHTML = "<span>" + p.innerHTML + "</span>";
+//         var span = document.querySelector("span");
+//         p.appendChild(span);
+
+//         let input = document.createElement("input");
+//         input.value = span.innerHTML;
+//         span.appendChild(input);
+
+//         input.addEventListener("blur", function(){
+//         span.innerHTML = this.value;
+//         p.addEventListener("click", func);
+//         })
+//         p.removeEventListener('click', func);
+//     })
+// }
+
+//обернуть каждый элемент строки в span,кроме пробелов
+// let text = document.getElementsByTagName('div')[0].innerHTML;
+// let newstroka = '';
+// for (var i = 0; i < text.length; i++){
+//     if (text[i]!=' '){
+//     newstroka = newstroka +'<span data-charCode=' + text[i].charCodeAt(0) +'>' + text[i] + '</span>';   
+//     }else newstroka = newstroka + ' '; 
+// }
+// document.getElementsByTagName('div')[0].innerHTML = newstroka;
+
+
+let pAll = document.getElementsByTagName('p').innerHTML;
+let newP = "";
+ for(let p of pAll){
+        newP = newP + '<span' + p + ">"  + '</span>';
+}
+document.getElementsByTagName('p').innerHTML = newP;

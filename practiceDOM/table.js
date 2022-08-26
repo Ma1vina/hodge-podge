@@ -175,3 +175,28 @@
 // for(var i=0; i<len; i++){ t
 //   table.deleteRow(0); 
 // }
+
+// 10.
+// Дана HTML таблица. Сделайте так, чтобы по клику на любую ячейку в ней появлялся инпут для редактирования
+//  текста этой ячейки.
+
+// let tdAll = document.querySelectorAll("#table td");
+// let tr = document.querySelector("tr");
+
+// for(let td of tdAll){
+//     td.addEventListener("click", function func(){
+//         let input = document.createElement("input");
+//         input.value = td.textContent;
+
+//         td.textContent = "";
+//         td.appendChild(input);
+
+
+//      input.addEventListener("blur", function(){
+//        td.textContent = this.value;
+//        td.addEventListener("click", func);
+//      })
+//      td.removeEventListener("click",func);
+//     })
+// }
+
