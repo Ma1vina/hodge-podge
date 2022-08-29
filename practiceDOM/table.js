@@ -103,7 +103,7 @@
 
 //     let td2 = document.createElement("td");
 //     td2.textContent = user.age;
-//     tr.appendChild(td2)
+//     tr.appendChild(td2);
 
 //     let td3 = document.createElement("td");
 //     td3.textContent = user.salary;
