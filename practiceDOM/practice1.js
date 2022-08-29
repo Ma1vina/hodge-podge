@@ -1,4 +1,4 @@
-// 1
+// 1.кнопки показа
 
 // let elem = document.querySelector('#elem');
 // let btn = document.querySelector('#btn');
