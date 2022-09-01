@@ -142,11 +142,52 @@
 // 22
 // let str = '^xx axx ^zz @xx bkk';
 // // Напишите регулярку, которая найдет строки по шаблону: НЕ шляпка и не собака, а затем две латинских буквы.
-// let x = str.replace(/[\^@]+?[a-z]{2}/g, "!");
+// let x = str.replace(/[^@]+[a-z]{2}/g, "!");
+// console.log(x); ?
+
+// // 23
+// let str = '^xx axx ^zz @xx bkk';
+// // // Напишите регулярку, которая найдет строки по шаблону: НЕ шляпка, а затем две латинских буквы.
+// let x = str.replace(/^\^+[a-z]{2}/g, "!");
+// console.log(x); ?
+
+
+// 14
+// let str = 'xaz x$z x-z xcz x+z x%z x*z';
+// // Найдите все строки по следующему шаблону: буква 'x', затем или доллар, или дефис или плюс, потом буква 'z'.
+// let x = str.replace(/x[$+-]z/g,"!");
 // console.log(x);
 
-// 23
-// let str = '^xx axx ^zz @xx bkk';
-// // Напишите регулярку, которая найдет строки по шаблону: НЕ шляпка, а затем две латинских буквы.
-// let x = str.replace(/[\^]+?[a-z]{2}/g, "!");
+// 15
+// С помощью метода test определите, что переданная строка является емэйлом.
+// let str = "my_mail@mail.ru"
+// let x = /^[a-zA-z]+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3}$/.test('my_mail@mail.ru');
 // console.log(x);
+
+// 16
+// let str = 'site.ru sss site.com zzz site.net'
+// // Получите массив доменных имен из этой строки.
+// let x = str.match(/[a-z]+\.[a-z]{2,3}/g);
+// console.log(x);
+
+// let str = '1 23 456 789';
+// let res = str.match(/\d+/g);
+// console.log(res);
+
+// 17
+// let str = 'a1b c34d x567z';
+// // Найдите сумму всех чисел этой строки.
+// let x = str.match(/\d/g);
+
+// let sum = 0;
+// for( let i =0; i<x.length;i++){
+//     sum = sum + +x[i];
+// }
+// console.log(sum);
+
+
+// 18
+// Найдите этот домен и положите его имя в первый карман, а зону - во второй.
+let str = 'sss domain.ru zzz';
+let x = str.match(/[a-z]+(\.[a-z]{2,3})/);
+console.log(x[0], x[1]);
