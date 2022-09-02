@@ -188,6 +188,55 @@
 
 // 18
 // Найдите этот домен и положите его имя в первый карман, а зону - во второй.
-let str = 'sss domain.ru zzz';
-let x = str.match(/[a-z]+(\.[a-z]{2,3})/);
-console.log(x[0], x[1]);
+// let str = 'sss domain.ru zzz';
+// let x = str.match(/[a-z]+(\.[a-z]{2,3})/);
+// console.log(x[0], x[1]);
+
+// 19
+// Поменяйте местами цифры во всех двухзначных числах.
+// let str = '12 34 56 78';
+// let x = str.replace(/(\d?)(\d?)/g, "$2$1");
+// console.log(x);
+
+// 20
+// let str = '31.12.2025';
+// // Преобразуйте эту дату в '2025.12.31'.
+// let x = str.replace(/(\d{2})(\.\d{2}\.)(\d+)/g, "$3$2$1");
+// console.log(x);
+
+// 21
+// let str = 'a1b2c3';
+// // Напишите регулярку, которая рядом с каждой цифрой напишет такую же.
+// let x = str.replace(/\d+/g, "$&$&");
+// console.log(x);
+
+
+// 22
+// let str = 'sss site.ru zzz site.com kkk';
+// // Замените домены на ссылки вида:
+
+// {/* <a href="http://site.ru">site.ru</a> */}
+
+// let x= str.replace(/([a-z]+\.[a-z]{2,3})/g, "<a href=\"http:\/\/$1\"><\/a>");
+// console.log(x);
+
+// 23
+// let str = 'aaa bbb ccc xyz';
+// // Найдите все подстроки, в которых есть три одинаковые буквы подряд.
+// let x = str.replace(/([a-z]{1})\1\1/g, "!");
+// console.log(x);
+
+// 24
+// let str = 'a aa aaa aaaa';
+// // // Найдите все подстроки, в которых есть две и более одинаковые буквы подряд.
+// let x = str.replace(/([a-z]{2,})\1/g, '!');
+// console.log(x);
+// ?
+
+
+// 25
+// let str = 'aaa aaa bbb bbb ccc ddd';
+// // Найдите все подстроки, в которых есть два одинаковых слова подряд.
+
+// let res = str.replace(/([a-z]+\s)\1/g, "!")
+// console.log(res);
