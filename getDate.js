@@ -406,19 +406,16 @@
 
 // Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом),
 //  который приходится на эту дату.
-let days = ["вс", 'пн' , 'вт' ,'чт' , 'пт', 'сб'];
+var input = document.querySelector("input");
+let days = ["вс", "пн", "вт", "чт", "пт", "сб"];
+input.addEventListener("blur",function() {
+let arr = input.value.split(".").reverse();
 
-function func(text){
-    let arr = text.split(".").reverse()
+let year = arr[0];
+let month = arr[1];
+let day = arr[2];
 
-    let year = arr[0];
-    let month = arr[1];
-    let day = arr[2];
-
-   let date = new Date(year,month,day);
-   let xxx = date.getDay();
-   console.log(days[xxx]);
-
-}
-let text='11.6.2022'
-func(text);
+let date = new Date(year, month, day);
+let xxx = date.getDay();
+console.log(days[xxx]);
+});
