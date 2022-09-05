@@ -287,5 +287,36 @@
 // }
 
 
-// var input = "+a1+b2d2+a1+b3d3";
-// var result = input.replace(/(\+[a-z\d]+\b)(.*?)\1/ig, '$1$2');
+// 32/ убрать повтор
+// // var input = "+a1+b2d2+a1+b3d3";
+// // var result = input.replace(/(\+[a-z\d]+\b)(.*?)\1/ig, '$1$2');
+
+
+// 33
+// Дана строка '23 + 35 ='. Числа могут быть любыми. Выведите на экран результат операции в виде '23 + 35 = 58'
+// var arr = '23 + 35 ='.replace(/(\d+)\s\+\s(\d+)\s=/g, function (match, match1, match2) {
+// 	var res = parseInt(match1) + parseInt(match2);
+// 	return match + res;
+// });
+// console.log(arr);
+
+// 34
+//  С помощью match найдите все емэйлы в виде массива.
+// Примеры емэйлов для тестирования mymail@mail.ru, my.mail@mail.ru, my-mail@mail.ru, my_mail@mail.ru, mail@mail.com, 
+// mail@mail.by, mail@yandex.ru
+// let x = "mymail@mail.ru my.mail@mail.ru my-mail@mail.ru my_mail@mail.ru mail@mail.com".match(/^[a-zA-z]+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3}$/g);
+// console.log(x[1]);?
+
+
+// 35
+// Дана строка с буквами, пробелами и цифрами. Найдите сумму всех чисел из данной строки. Скрыть решение.
+
+// var arr = [];
+// var sum = 0;
+// var str="46 vf 45 ty";
+// arr = str.match(/\d/g);
+
+// for (var i = 0; i < arr.length; i++) {
+// 	sum = sum + parseInt(arr[i]);
+// }
+// console.log(sum);  
