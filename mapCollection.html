@@ -5,6 +5,72 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- 1 -->
+    <!-- <p>aaa</p>
+    <p>bbb</p>
+    <p>ccc</p>
+    <p>ddd</p>
+    <p>eee</p> -->
+
+<!-- 2 -->
+<!-- <input type="text">
+<input type="text">
+<input type="text"> -->
+ 
+    <!-- 4 -->
+    <input type="number">
+    <input type="number">
+    <input type="number">
+
+    <script>
+// 1
+// let elems = document.querySelectorAll('p');
+// let map = new Map;
+
+// let i = 1;
+// for (let elem of elems) {
+// 	map.set(elem, i++);
+// }
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		this.textContent = this.textContent + map.get(this);
+// 	});
+// }
+
+// 2    Даны инпуты. Переберите эти инпуты циклом и создайте коллекцию Map, ключами в которой будут инпуты, а значением 
+    // - их порядковый номер на странице. Сделайте так, чтобы по клику на любой инпут ему в value записывался его порядковый
+    //  номер. 
+// let inps = document.querySelectorAll("input");
+// let map = new Map;
+// let i = 1;
+// for(let inp of inps){
+//    map.set(inp, i++);
+// }
+// for(let inp of inps){
+//     inp.addEventListener("click", function(){
+//     inp.value = map.get(this);
+// })
+// }
+
+        //4 Даны инпуты. В каждый инпут можно ввести число. Пусть по нажатию на Enter инпут запоминает введенное 
+// число. Сделайте так, чтобы по потери фокуса в инпуте в консоль выводился массив всех введенных ранее 
+// в инпут чисел.
+        let inputs = document.querySelectorAll("input");
+        let map = new Map;
+
+let index = 0;
+
+for(let input of inputs) {
+  input.addEventListener('keydown', function(event) {   
+     if (event.code !== 'Enter' && event.code !== 'NumpadEnter' ) return; 
+     map.set(index, this.value);
+     index++;
+     this.value = '';                    
+  });
+  input.addEventListener('blur', ()=> {
+    console.log([...map.values()])
+  });
+}
+    </script>
 </body>
 </html>

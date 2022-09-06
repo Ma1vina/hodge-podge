@@ -27,25 +27,28 @@
 
 // 3
 // Пусть дана коллекция Map. Получите массив ее ключей и переберите их циклом for-of.
-let map = new Map;
+// let map = new Map;
 
-let obj =[
-    ["огурец", 500],
-    ["помидор", 350],
-    ["лук",    50]
-  ];
+// let obj =[
+//     ["огурец", 500],
+//     ["помидор", 350],
+//     ["лук",    50]
+//   ];
   
-  // перебор по ключам;
-  for (let vegetable of obj.keys()) {
-    console.log(vegetable); // огурец, помидор, лук
-  }
+//   // перебор по ключам;
+//   for (let vegetable of obj.keys()) {
+//     console.log(vegetable); // огурец, помидор, лук
+//   }
   
-  // перебор по значениям (числа)
-  for (let amount of obj.values()) {
-    console.log(amount); // 500, 350, 50
-  }
+//   // перебор по значениям (числа)
+//   for (let amount of obj.values()) {
+//     console.log(amount); // 500, 350, 50
+//   }
   
-  // перебор по элементам в формате [ключ, значение]
-  for (let entry of obj) { 
-    console.log(entry); // огурец,500 (и так далее)
-  }
+//   // перебор по элементам в формате [ключ, значение]
+//   for (let entry of obj) { 
+//     console.log(entry); // огурец,500 (и так далее)
+//   }
+
+// 4
+
