@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1
+<p>1</p>
+<p>2</p>
+<p>3</p> -->
+
+<!-- 2 -->
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+
+
+    <script>
+        // 1
+// Каким-нибудь способом получите псевдомассив элементов. Преобразуйте его в массив тремя описанными способами.
+// let elems = document.querySelectorAll("p");
+// let arr = [...elems];
+// console.log(arr);
+
+
+// let arr = [];
+// for (let elem of elems) {
+// 	arr.push(elem);
+// }
+
+// let arr = Array.from(elems);
+
+// 2
+let elems = document.querySelectorAll('p');
+// С помощью метода slice получите все абзацы, кроме первого и последнего.
+let arr = [];
+for (let elem of elems) {
+	arr.push(elem);
+}
+console.log(arr)
+let arR = arr.slice(1,3);
+console.log(arR);
+
+
+    </script>
+</body>
+</html>
