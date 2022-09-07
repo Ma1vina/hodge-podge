@@ -33,3 +33,8 @@
 //     }
 // console.log(summ);
 
+// 3
+// let json = ['user1', 'user2', 'user3', 'user4', 'user5'];
+// // Преобразуйте этот массив в формат JSON.
+// let jsonArr =JSON.parse(json);
+// console.log(arr);
