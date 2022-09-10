@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <!-- 1.1 -->
+  <!-- Создайте поле textarea, значение которого будет автоматически сохраняться при каждом его изменении.
+Когда пользователь закроет страницу и потом откроет её заново он должен увидеть последнее введённое значение. -->
+
+  <textarea style="width:200px; height: 60px;" id="area" placeholder="Напишите сообщение здесь"></textarea>
+  <br>
+  <button onclick=" localStorage.removeItem('area');area.value='' ">Очистить</button>
+
+    <script>
+
+// localStorage.setItem("key1", "1");
+// localStorage.setItem("key2", "2");
+// localStorage.setItem("key3", "3");
+
+// let str1 = localStorage.getItem("key1");
+// let str2 = localStorage.getItem("key2");
+// let str3 = localStorage.getItem("key3");
+// console.log(str1);
+// console.log(str2);
+// console.log(str3);
+
+// let sum = Number(str1) + Number(str2) + Number(str3);
+// console.log(sum);
+
+//однократное сохранение
+// По заходу пользователя на сайт запишите в локальное хранилище текущий момент времени.
+// Затем по повторному заходу выведите, сколько прошло времени с предыдущего захода пользователя
+// на сайт.
+// let time = localStorage.getItem('time');
+// let newTime = localStorage.getItem("newTime");
+
+// if (time === null) {
+// 	var now = ( new Date() ).getTime();
+// 	localStorage.setItem('time', now); 
+    
+// }else{
+//     let newNow = ( new Date() ).getTime();
+//  	localStorage.setItem('newTime', newNow);
+//     let x = newTime - time; //разница во времени в обновлении странички
+//     console.log(x/1000/60/60);//в минутах 
+// }
+
+
+
+// 2
+// По заходу пользователя на сайт спросите у него дату рождения. При следующем заходе пользователя
+//  на сайт, если у него в этот день будет День Рождения - поздравьте его с этим праздником.
+
+
+// let time = localStorage.getItem('time'); //первый заход
+// let newTime = localStorage.getItem("newTime");// второй заход
+// let happyB = localStorage.getItem("HB");//дата др
+
+// if (time === null) {
+// 	var now = new Date();
+//     let x2 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+// 	localStorage.setItem('time', x2); 
+
+
+//     let p = document.createElement("p");
+//     p.textContent = "введите дату в формате гггг.мммм.дддд"
+//     let input = document.createElement("input");
+//     let btn = document.createElement("button");
+//     btn.value = "save";
+
+//     btn.addEventListener("click", function(){
+// localStorage.setItem("HB", xxx);
+// alert("coxранено!")
+// })
+// }else{
+//     let now = new Date();
+//     let x1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+// 	localStorage.setItem('newTime', x1);
+//    if(newTime == HB){
+//     alert("с днем рождения!")
+//    }
+// } ??
+
+// function func(str){
+// 	let arr = str.split(/,/);
+// 	arr[0] = +arr[0] + 1;
+// 	arr[0]= String(arr[0]);
+//   console.log(arr.join(","))
+//  }
+
+//==========================================
+
+
+// if (localStorage.getItem('time') == null) {
+//     localStorage.setItem('time', Date.now()) //текущее время сохранится в localstorage
+// }
+
+
+// =======================================
+// if (!sessionStorage.getItem('startTime')) {
+//   sessionStorage.setItem('startTime', Date.now());
+// }
+
+// const enterTime = sessionStorage.getItem('startTime')
+
+// const showPopup = () => {
+//   let currentTime = Date.now()
+//   let spentTime = (currentTime - enterTime) / 1000
+//   if (spentTime >= 60) {
+//     clearInterval(timer)
+//     console.log(`Вы провели на сайте минут: ${Math.floor(spentTime / 60)}, секунд: ${Math.floor(spentTime % 60)}`);
+//   }
+// }
+
+// const timer = setInterval(showPopup, 10000)
+
+
+//1.1
+area.value = localStorage.getItem('area');
+    area.oninput = () => {
+      localStorage.setItem('area', area.value)
+    };
+</script>
+</body>
+</html>
+
+
+
