@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//   1
+//         try {
+// 	let data = JSON.parse('{1,2,3,4,5}');
+// } catch (error) {
+// 	alert('невозможно выполнить операцию разбора JSON');
+// }
+
+// 2
+// try {
+// 	let str = '';
+// for (let i = 1; i <= 6 * 10 ** 6; i++) { // формируем строку более 5 мб
+// 	str += '+';
+// }
+// localStorage.setItem('key', str);
+// } catch (error) {
+// 	alert('хранилище переполнено, пожалуйста уменьшите объем данных. Макс. 5 МБ');
+// }
+
+// 3
+// function save(str) {
+// 	localStorage.setItem('key', str);
+// }
+
+// try {
+// 	save('некая строка');
+// } catch (error) {
+// 	alert('закончилось место в локальном хранилище!');
+// }
+
+// 4
+
+// function saveData(json) {
+// 	let arr = JSON.parse(json);
+	
+// 	for (let i = 0; i < arr.length; i++) {
+// 		localStorage.setItem(i, arr[i]);
+// 	}
+// }
+
+// try {
+// 	saveData('{1,2,3,4,5}');
+// } catch (error) {
+// 	if (error.name == 'QuotaExceededError') {
+// 		alert('закончилось место в хранилище');
+// 	}
+	
+// 	if (error.name == 'SyntaxError') {
+// 		alert('некорректный JSON');
+// 	}
+// }
+// // Можно обработку ошибок сделать внутри функции saveData:
+
+// function saveData(json) {
+// 	try {
+// 		let arr = JSON.parse(json);
+		
+// 		for (let i = 0; i < arr.length; i++) {
+// 			try {
+// 				localStorage.setItem(i, arr[i]);
+// 			} catch (error) {
+// 				alert('закончилось место в хранилище');
+// 			}
+// 		}
+// 	} catch (error) {
+// 		alert('некорректный JSON');
+// 	}
+// }
+
+// 5
+// создание исключений
+// function div(a, b) {
+// 	if (b !== 0) {
+// 		return a / b;
+// 	} else {
+// 		throw new Error('на ноль делить нельзя');
+// 	}
+// }
+
+// try {
+// 	alert( div(3, 0) );
+// } catch (error) {
+// 	alert('вы пытаетесь делить на 0, что запрещено');
+// }
+
+6
+try {
+	let json = '{"product": "яблоко", "amount": 5}';
+	let product = JSON.parse(json);
+	
+	if (product.price !== undefined && product.amount !== undefined) {
+		alert(product.price * product.amount);
+	} else {
+		throw {
+			name: 'ProductCostError',
+			message: 'отсутствует цена или количество у продукта'
+		};
+	}
+} catch (error) {
+	if (error.name == 'SyntaxError') {
+		alert('Некорректный JSON продукта');
+	} else if (error.name == 'ProductCostError') {
+		alert('У продукта отсутствует цена или количество');
+	}
+}
+
+    </script>
+</body>
+</html>
