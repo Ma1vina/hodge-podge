@@ -1,4 +1,6 @@
 import React from 'react';
+import uuid from 'react-uuid';
+import { useState } from 'react';
 export default App;
 
 
@@ -308,16 +310,17 @@ export default App;
 // 21 объекты
 
 // const prods = [
-// 	{name: 'product1', cost: 100},
-// 	{name: 'product2', cost: 200},
-// 	{name: 'product3', cost: 300},
+// 	{id: 1, name: 'product1', cost: 100},
+// 	{id: 2, name: 'product2', cost: 200},
+// 	{id: 3, name: 'product3', cost: 300},
 // ];
 
 // function App() {
-// 	const res = prods.map(function(item, index) {
-// 		return (
-// 			 <p key={index}><span>{item.name}</span>:<span>{item.cost}</span></p>
-// 		);
+// 	const res = prods.map(function(item) {
+// 		return <p key={item.id}>
+// 			<span>{item.name}</span>:
+// 			<span>{item.cost}</span>
+// 		</p>;
 // 	});
 	
 // 	return <div>
@@ -326,22 +329,296 @@ export default App;
 // }
 
 // 22
+// тпблицы
 
-const prods = [
-	{id: 1, name: 'product1', cost: 100},
-	{id: 2, name: 'product2', cost: 200},
-	{id: 3, name: 'product3', cost: 300},
-];
+// const prods = [
+// 	{id: 1, name: 'product1', cost: 100},
+// 	{id: 2, name: 'product2', cost: 200},
+// 	{id: 3, name: 'product3', cost: 300},
+// ];
 
+// function App() {
+// 	const rows = prods.map(function(item) {
+// 		return <tr key={item.id}>
+// 			<td>{item.name}</td>
+// 			<td>{item.cost}</td>
+// 		</tr>;
+// 	});
+	
+// 	return <table>
+// 		<tbody>
+// 			{rows}
+// 		</tbody>
+// 	</table>;
+// }
+
+
+// function App() {
+// 	const rows = prods.map(function(item) {
+// 		return <tr key={item.id}>
+// 			<td>{item.name}</td>
+// 			<td>{item.cost}</td>
+// 		</tr>;
+// 	});
+	
+// 	return <table>
+// 		<thead>
+// 			<tr>
+// 				<td>название</td>
+// 				<td>стоимость</td>
+// 			</tr>
+// 		</thead>
+// 		<tbody>
+// 			{rows}
+// 		</tbody>
+// 	</table>;
+// }
+
+// 23
+// генерация id
+// function id(){
+//     return uuid()
+// }
+
+// const prods = [
+// 	{id: id(), name: 'product1', cost: 100},
+// 	{id: id(), name: 'product2', cost: 200},
+// 	{id: id(), name: 'product3', cost: 300},
+// ];
+
+
+// function App() {
+// 	const res = prods.map(function(item) {
+// 		return <p key={item.id}>
+// 			<span>{item.name}</span>:
+// 			<span>{item.cost}</span>
+// 		</p>;
+// 	});
+	
+// 	return <div>
+// 		{res}
+// 	</div>;
+// }
+//получилось:)))))
+
+
+
+// const array = ['one', 'two', 'three'];
+// function App() {
+//     	const res = array.map(function(item) {
+//     		return <p key={uuid()}>{item}</p>;
+//     	});
+        
+//     	return <div>
+//     		{res}
+//     	</div>;
+//     } // генерировать id в атрибуте неправильно!
+
+
+
+
+
+// Стейты
+
+
+// 1
+// function App() {
+// 	const [name, setName] = useState('prod');
+	
+// 	return <div>
+// 		<span>{name}</span> // изначальное значение
+// 	</div>;
+// }
+
+
+// function App() {
+// 	let [name, setName] = useState('prod');
+	
+// 	function clickHandler() {
+// 		setName('xxxx');
+// 	}
+	
+// 	return <div>
+// 		<span>{name}</span>
+// 		<button onClick={clickHandler}>btn</button>
+// 	</div>;
+// }
+
+
+// function App() {
+// 	let [name, setName] = useState('prod');
+// 	let [cost, setCost] = useState('1000');
+	
+// 	function clickHandler1() {
+// 		setName('xxxx');
+// 	}
+// 	function clickHandler2() {
+// 		setCost('2000');
+// 	}
+	
+// 	return <div>
+// 		<span>{name}</span>
+// 		<span>{cost}</span>
+		
+// 		<button onClick={clickHandler1}>btn1</button>
+// 		<button onClick={clickHandler2}>btn2</button>
+// 	</div>;
+// }
+
+
+// 2
+// function App() {
+// 	let [inCart, setInCart] = useState(false);
+	
+// 	return <div>
+// 		<span>{inCart ? 'в корзине' : 'не в корзине'}</span>
+// 	</div>;
+// }
+
+
+// function App() {
+// 	let [inCart, setInCart] = useState(false);
+	
+// 	return <div>
+// 		<span>{inCart ? 'в корзине' : 'не в корзине'}</span>
+// 		<button onClick={() => setInCart(!inCart)}>btn</button>
+// 	</div>;
+// }
+
+// 3 счетчик
+// function App() {
+// 	let [count, setCount] = useState(0);
+	
+// 	function clickHandler() {
+// 		setCount(count + 1);
+// 	}
+	
+// 	return <div>
+// 		<span>{count}</span>
+// 		<button onClick={clickHandler}>+</button>
+// 	</div>;
+// }
+
+
+// 4 Пусть вы хотите отображать на экране данные юзера: его имя, фамилию, возраст. 
+// Сделайте для этого соответствующие стейты с начальными значениями.
+
+// const user = [
+// 	{id:getId(), firstName: "Marina",lastName: "River", age: "25"}
+// ];
+
+// function getId(){
+// 	return uuid();
+// }
+
+
+// function App(){
+
+// 	const result = user.map(function(elem){
+// 		return(
+// 			<>
+// 				<p key={elem.id}> Пользователь: {elem.firstName} {elem.lastName}<br/> Возраст:  {elem.age}</p>
+// 			</>
+// 		)
+// 	})
+// 	return (
+// 		<div>{result}</div>
+// 	)
+// }
+
+
+// Сделайте кнопки для изменения имени и фамилии.
+// function App() {
+// 	let [firstName, setName1] = useState('Marina');
+// 	let [lastName, setName2] = useState('River');
+	
+// 	function clickHandler1() {
+// 		setName1('Jake');
+// 	}
+// 	function clickHandler2() {
+// 		setName2('Dog');
+// 	}
+	
+// 	return <div>
+// 		<span>{firstName}</span>
+// 	    <br/>
+// 		<span>{lastName}</span>
+// 		<br/>
+// 		<button onClick={clickHandler1}>Change Name1</button>
+// 		<br/>
+// 		<button onClick={clickHandler2}>Change Name2 </button>
+// 	</div>;
+// }
+
+
+// Добавьте еще один стейт, который будет показывать, забанен пользователь или нет.
+//  Выведите информацию об этом в каком-нибудь теге.
+// function App() {
+// 	let [firstName, setName1] = useState('Marina');
+// 	let [lastName, setName2] = useState('River');
+// 	let [isBlocked, setBlock] = useState(false);
+	
+// 	function clickHandler1() {
+// 		setName1('Jake');
+// 	}
+// 	function clickHandler2() {
+// 		setName2('Dog');
+// 	}
+	
+// 	return <div>
+// 		<span>{firstName}</span>
+// 	    <br/>
+// 		<span>{lastName}</span>
+// 		<br/>
+// 		<button onClick={clickHandler1}>Change Name1</button>
+// 		<br/>
+// 		<button onClick={clickHandler2}>Change Name2 </button>
+// 		<p>{isBlocked? "blocked" : "not blocked"}</p>
+// 	</div>;
+// }
+
+// Сделайте кнопку, нажатие на которую будет банить пользователя и кнопку, 
+// нажатие на которую будет разбанивать пользователя.
+
+// function App() {
+// 	let [firstName, setName1] = useState('Marina');
+// 	let [lastName, setName2] = useState('River');
+// 	let [isBlocked, setBlock] = useState(false);
+	
+// 	function clickHandler1() {
+// 		setName1('Jake');
+// 	}
+// 	function clickHandler2() {
+// 		setName2('Dog');
+// 	}
+
+	
+// 	return <div>
+// 		<span>{firstName}</span>
+// 	    <br/>
+// 		<span>{lastName}</span>
+// 		<br/>
+// 		<button onClick={clickHandler1}>Change Name1</button>
+// 		<br/>
+// 		<button onClick={clickHandler2}>Change Name2 </button>
+		
+// 		<p>{ isBlocked? "blocked" : "not blocked"}</p>
+
+// 		<button onClick={() => setBlock(true)}>BLOCK</button>
+// 		<button onClick={() => setBlock(false)}>not BLOCK</button>
+// 	</div>;
+// }
+
+//ИНПУТЫ
 function App() {
-	const res = prods.map(function(item) {
-		return <p key={item.id}>
-			<span>{item.name}</span>:
-			<span>{item.cost}</span>
-		</p>;
-	});
+	const [value, setValue] = useState('');
+	
+	function handleChange(event) {
+		setValue(event.target.value);
+	}
 	
 	return <div>
-		{res}
+		<input value={value} onChange={handleChange} />
+		<p>text: {value}</p>
 	</div>;
 }
