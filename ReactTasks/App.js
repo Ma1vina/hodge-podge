@@ -1,6 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import { useState } from 'react';
+import { number } from 'prop-types';
 export default App;
 
 
@@ -610,15 +611,156 @@ export default App;
 // }
 
 //ИНПУТЫ
-function App() {
-	const [value, setValue] = useState('');
+//1  
+// function App() {
+// 	const [value, setValue] = useState('');
 	
-	function handleChange(event) {
-		setValue(event.target.value);
-	}
+// 	function handleChange(event) {
+// 		setValue(event.target.value);
+// 	}
 	
-	return <div>
-		<input value={value} onChange={handleChange} />
-		<p>text: {value}</p>
-	</div>;
-}
+// 	return <div>
+// 		<input value={value} onChange={handleChange} />
+// 		<p>text: {value}</p>
+// 	</div>;
+// }
+
+
+// 2
+// Сделайте два инпута. Пусть текст первого инпута выводится в первый абзац, а текст второго инпута - во второй абзац.
+// function App(){
+// 	const[value1, setValue1] = useState("")
+// 	const[value2, setValue2] = useState("")
+
+// 	return (
+// 		<div>
+// 		<input value={value1} onChange={event => setValue1(event.target.value)}></input>
+// 		<p>текст: {value1}</p>
+// 		<input value={value2} onChange={event => setValue2(event.target.value)}></input>
+// 		<p>текст: {value2}</p>
+// 		</div>
+// 	)
+// }
+
+// 3
+// Дан инпут. Дан абзац. Сделайте так, чтобы при вводе текста в инпут, в 
+// абзаце выводилось количество введенных в инпут символов.
+
+// function App(){
+// 		const[value, setValue] = useState("")
+// 		return (
+// 			<div>
+// 			<input value={value} onChange={event => setValue(event.target.value)}></input>
+// 			<p>текст: {value.length}</p>
+// 			</div>
+// 		)
+// 	}
+
+
+// 4
+// Дан инпут и абзац. В инпут вводится возраст пользователя. Сделайте так, чтобы при наборе текста, в
+//  абзаце автоматически появлялся год рождения пользователя.
+
+// function App(){
+// 		const[value, setValue] = useState("")
+
+//         function getYear(){
+// 			let date = new Date();
+// 			let x = date.getFullYear();
+// 			return x;
+// 		}
+
+// 		return (
+// 			<div>
+// 			<input value={value} onChange={event => setValue(event.target.value)}></input>
+// 			<p>Год рождения: {getYear() - Number(value)}</p>
+// 			</div>
+// 		)
+// 	}
+
+
+// 5 вывод по кнопке
+// function App() {
+// 	const [value1, setValue1] = useState(0);
+// 	const [value2, setValue2] = useState(0);
+// 	const [result, setResult] = useState(0);
+	
+// 	function handleChange1(event) {
+// 		setValue1(event.target.value);
+// 	}
+	
+// 	function handleChange2(event) {
+// 		setValue2(event.target.value);
+// 	}
+	
+// 	function handleClick() {
+// 		setResult(Number(value1) + Number(value2));
+// 	}
+	
+// 	return <div>
+// 		<input value={value1} onChange={handleChange1} />
+// 		<input value={value2} onChange={handleChange2} />
+		
+// 		<button onClick={handleClick}>btn</button>
+// 		<p>result: {result}</p>
+// 	</div>;
+// }
+
+// 6Даны два инпута, кнопка и абзац. Пусть в инпуты вводятся даты в формате 2025-12-31.
+//  По нажатию на кнопку найдите разницу между датами в днях и результат выведите в абзац.
+// function App() {
+// 	const [value1, setValue1] = useState(0);
+// 	const [value2, setValue2] = useState(0);
+// 	const [result, setResult] = useState(0);
+	
+// 	function handleChange1(event) {
+// 		setValue1(event.target.value);
+// 	}
+	
+// 	function handleChange2(event) {
+// 		setValue2(event.target.value);
+// 	}
+	
+// 	function handleClick() {
+//          let str1 = value1.split("-").join(",")
+// 		 let str2 = value2.split("-").join(",")
+// 		 let date1 = new Date(str1);
+// 		 let date2 = new Date(str2);
+//          let v1 = date1.getFullYear()+ date1.getMonth()  + date1.getDate()
+// 		 let v2 = date2.getFullYear()+ date2.getMonth()  + date2.getDate()
+// 		setResult((v1) - (v2));
+// 	}
+	
+// 	return <div>
+// 		<input value={value1} onChange={handleChange1} />
+// 		<input value={value2} onChange={handleChange2} />
+		
+// 		<button onClick={handleClick}>btn</button>
+// 		<p>Прошло дней: {result}</p>
+// 	</div>;
+// }
+
+// 7
+// Дан инпут и абзац. В инпут вводится число. По потери фокуса выведите в абзац сумму цифр введенного числа.
+
+//  function App() {
+// 	const [value, setState] = useState("")
+//     const [result, setResult] = useState(0);
+
+//    function handleChange(event){
+//        setState(event.target.value)
+//     }
+
+//    function handleBlur(){
+// 		let sum=0;
+//       let arr = value.split("");
+// 	  for(let elem of arr){
+// 		sum = sum +Number(elem)
+// 	  }
+// 	  return setResult(sum);
+//     }
+//     return <div>
+// 		<input onBlur={handleBlur} onChange={handleChange} value={value} />
+//      <p> {result}</p>
+// 	 </div>
+// }
