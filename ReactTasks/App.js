@@ -764,3 +764,213 @@ export default App;
 //      <p> {result}</p>
 // 	 </div>
 // }
+
+
+// TEXTAREA
+// function App() {
+// 	const [value, setValue] = useState('');
+	
+// 	function handleChange(event) {
+// 		setValue(event.target.value);
+// 	}
+	
+// 	return <div>
+// 		<textarea value={value} onChange={handleChange} />
+// 		<p>{value}</p>
+// 	</div>;
+// }
+
+
+// ЧЕКБОКСЫ
+// 1
+// function App() {
+// 	const [checked, setChecked] = useState(true);
+	
+// 	function handleChange() {
+// 		setChecked(!checked); // инвертируем 
+// 	}
+	
+// 	return <div>
+// 		<input type="checkbox" checked={checked} onChange={handleChange} />
+// 	</div>;
+// }
+
+//2 function App() {
+// 	const [checked, setChecked] = useState(true);
+	
+// 	return <div>
+// 		<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
+// 		<p>состояние: {checked ? 'отмечен' : 'не отмечен'}</p>
+// 	</div>;
+// }
+
+// 3
+// function App() {
+// 	const [checked, setChecked] = useState(true);
+	
+// 	let message;
+// 	if (checked) {
+// 		message = <p>сообщение 1</p>;
+// 	} else {
+// 		message = <p>сообщение 2</p>;
+// 	}
+	
+// 	return <div>
+// 		<input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} />
+// 		<div>{message}</div>
+// 	</div>;
+// }
+
+// 4
+// СЕЛЕКТЫ
+// function App() {
+// 	const [value, setValue] = useState('');
+	
+// 	function handleChange(event) {
+// 		setValue(event.target.value);
+// 	}
+	
+// 	return <div>
+// 		<select value={value} onChange={handleChange}>
+// 			<option>text1</option>
+// 			<option>text2</option>
+// 			<option>text3</option>
+// 			<option>text4</option>
+// 		</select>
+// 		<p>
+// 			ваш выбор: {value}
+// 		</p>
+// 	</div>;
+// }
+
+// из массива
+// 1
+// function App() {
+// 	const texts = ['я', 'ты', 'мы', 'они'];
+// 	const [value, setValue] = useState('');
+	
+// 	const options = texts.map((text, index) => {
+// 		return <option key={index}>{text}</option>;
+// 	});
+	
+// 	return <div>
+// 		<select value={value} onChange={(event) => setValue(event.target.value)}>
+// 			{options}
+// 		</select>
+// 		<p>
+// 			ваш выбор: {value}
+// 		</p>
+// 	</div>;
+// }
+
+
+// 2
+// function App() {
+// 	const [value, setValue] = useState('');
+	
+// 	return <div>
+// 		<select value={value} onChange={event => setValue(event.target.value)}>
+// 			<option value="1">text1</option>
+// 			<option value="2">text2</option>
+// 			<option value="3">text3</option>
+// 		</select>
+// 		<p>
+// 			{value === '1' && 'вы выбрали первый пункт'}
+// 			{value === '2' && 'вы выбрали второй пункт'}
+// 			{value === '3' && 'вы выбрали третий пункт'}
+// 		</p>
+// 	</div>;
+// }
+
+
+// 3
+// function App() {
+// 	const texts = ['textq', 'textw', 'textr', 'textt'];
+// 	const [value, setValue] = useState('');
+	
+// 	const options = texts.map((text, index) => {
+// 		return <option key={index} value={index}>{text}</option>;
+// 	});
+	
+// 	return <div>
+// 		<select value={value} onChange={event => setValue(event.target.value)}>
+// 			{options}
+// 		</select>
+// 		<p>
+// 			ваш выбор: {texts[value]}
+// 		</p>
+// 	</div>;
+// }
+
+// РАДИОКНОПОЧКИ
+// function App() {
+// 	const [value, setValue] = useState(1);
+	
+// 	function changeHandler(event) {
+// 		setValue(event.target.value);
+// 	}
+	
+// 	return <div>
+// 		<input
+// 			type="radio"
+// 			name="radio"
+// 			value="1"
+// 			checked={value === '1' ? true : false}
+// 			onChange={changeHandler}
+// 		/>
+// 		<input
+// 			type="radio"
+// 			name="radio"
+// 			value="2"
+// 			checked={value === '2' ? true : false}
+// 			onChange={changeHandler}
+// 		/>
+// 		<input
+// 			type="radio"
+// 			name="radio"
+// 			value="3"
+// 			checked={value === '3' ? true : false}
+// 			onChange={changeHandler}
+// 		/>
+// 	</div>
+// }
+
+// ЗАНЧЕНИЕ ПО УМОЛЧАНИЮ  В ИНПУТЕ И ЧЕКБОКСЕ!
+// 1. ИНП
+// function App() {
+// 	const [value, setValue] = useState('text');
+	
+// 	return <div>
+// 		<input defaultValue={value} />
+// 	</div>;
+// }
+
+
+// 2. ЧЕКБОКС
+// function App() {
+// 	const [checked, setChecked] = useState(true);
+	
+// 	return <div>
+// 		<input type="checkbox" defaultChecked={checked} />
+// 	</div>;
+// }
+
+
+// 3. ПО УМОЛЧАНИЮ ТЕКУЩАЯ ДАТА
+// function App() {
+// 	const [value, setValue] = useState("");
+
+// 	let data = new Date();
+// 	let x = addZero(data.getFullYear()) + "-" + addZero(data.getMonth()+1) + "-" + addZero(data.getDate());
+
+// 	function addZero(num) {
+// 			if (num >= 0 && num <= 9) {
+// 				return '0' + num;
+// 			} else {
+// 				return num;
+// 			}
+// 		}
+// 	return <div>
+// 		<input defaultValue={x} />
+// 	</div>;
+// }
