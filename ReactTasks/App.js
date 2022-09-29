@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import { useState } from 'react';
-import { node, number, object } from 'prop-types';
+import { func, node, number, object } from 'prop-types';
 export default App;
 
 
@@ -1117,15 +1117,15 @@ export default App;
 // }
 
 // summ
-function getSum(arr) {
-	let sum = 0;
+// function getSum(arr) {
+// 	let sum = 0;
 	
-	for (const elem of arr) {
-		sum += +elem;
-	}
+// 	for (const elem of arr) {
+// 		sum += +elem;
+// 	}
 	
-	return sum;
-}
+// 	return sum;
+// }
 
 
 // function App() {
@@ -1159,24 +1159,48 @@ function getSum(arr) {
 
 // или:
 //сумма значений в инпутах
-function App() {
-	const [notes, setNotes] = useState([1, 2, 3]);
+// function App() {
+// 	const [notes, setNotes] = useState([1, 2, 3]);
 	
-	const result = notes.map((note, index) => {
-		return <input
-			key={index}
-			value={note}
-			onChange={event => changeHandler(index, event)}
-		/>;
+// 	const result = notes.map((note, index) => {
+// 		return <input
+// 			key={index}
+// 			value={note}
+// 			onChange={event => changeHandler(index, event)}
+// 		/>;
 
         
-	function changeHandler(index, event) {
-		setNotes([...notes.slice(0, index), event.target.value, ...notes.slice(index + 1)]);
-	}
-	});
+// 	function changeHandler(index, event) {
+// 		setNotes([...notes.slice(0, index), event.target.value, ...notes.slice(index + 1)]);
+// 	}
+// 	});
 	
-	return <div>
-		{result}
-		{getSum(notes)}
-	</div>;
+// 	return <div>
+// 		{result}
+// 		{getSum(notes)}
+// 	</div>;
+// }
+
+//2
+//  const notes = ['a', 'b', 'c', 'd', 'e'];
+// Выведите элементы этого массива в виде списка ul. Сделайте так,
+//  чтобы в конце каждой li стояла кнопка для ее удаления.
+function App(){
+    const[notes, setNotes] = useState(['a', 'b', 'c', 'd', 'e']);
+
+    function removeLi(index){
+        setNotes([...notes.slice(0,index), ...notes.slice(index+1)])
+    }
+
+    const result = notes.map((note,index) => {
+    return <ul>
+    <li key={index}> {note}
+        </li>
+        <button onClick={event =>removeLi(index,event)} >click</button>
+        </ul>
+    })
+
+    return <div>
+        {result}
+    </div>
 }
