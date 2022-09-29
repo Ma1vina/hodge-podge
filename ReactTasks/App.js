@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid';
 import { useState } from 'react';
-import { number } from 'prop-types';
+import { node, number, object } from 'prop-types';
 export default App;
 
 
@@ -974,3 +974,209 @@ export default App;
 // 		<input defaultValue={x} />
 // 	</div>;
 // }
+
+// МАССИВЫ
+//добавить элем по клику
+// function App() {
+// 	const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+
+//     function func(){
+// 	// const copy = Object.assign([],notes)
+//     // copy.push(6);
+//     // setNotes(copy)
+//     // или:
+//     setNotes([...notes, 6]);
+//     }
+
+
+// 	const result = notes.map((note, index) => {
+// 		return <p key={index}>{note}</p>;
+// 	});
+	
+// 	return <div>
+// 		{result}
+//         <button onClick={func}>click</button>
+// 	</div>;
+// }
+
+// 2
+// Сделайте кнопку, по нажатию на которую будет происходить удаление элемента из массива. 
+// Пусть номер элемента для удаления хранится в переменной.
+// function App() {
+//     	const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+    
+//         function func(){
+//         let index = 0;
+//     	const copy = Object.assign([],notes)
+//         copy.splice(index, 1);
+//         setNotes(copy);
+//         }
+    
+    
+//     	const result = notes.map((note, index) => {
+//     		return <p key={index}>{note}</p>;
+//     	});
+        
+//     	return <div>
+//     		{result}
+//             <button onClick={func}>click</button>
+//     	</div>;
+//     }
+
+
+// 3
+// Сделайте кнопку, по нажатию на которую будет происходить удаление элемента из массива.
+//  Пусть номер элемента для удаления хранится в переменной.
+    // function App() {
+    // 	const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+    
+    //     function func(){
+    //     let index = 0;
+    // 	const copy = Object.assign([],notes)
+    //     copy[index] = "!";
+    //     setNotes(copy);
+    //     }
+    
+    // 	const result = notes.map((note, index) => {
+    // 		return <p key={index}>{note}</p>;
+    // 	});
+        
+    // 	return <div>
+    // 		{result}
+    //         <button onClick={func}>click</button>
+    // 	</div>;
+    // }
+    
+
+    // добавление абзаца из инпута по клику
+    // function App() {
+    //     const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+    //     const [value, setValue] = useState('');
+        
+    //     const result = notes.map((note, index) => {
+    //         return <p key={index}>{note}</p>;
+    //     });
+        
+    //     function addItem() {
+    //         setNotes([...notes, value]);
+    //     }
+        
+    //     function changeInput(event) {
+    //         setValue(event.target.value);
+    //     }
+        
+    //     return <div>
+    //         {result}
+            
+    //         <input value={value} onChange={changeInput} />
+    //         <button onClick={addItem}>add</button>
+    //     </div>;
+    // }
+
+
+    //удаление абзца по клику
+    // function App() {
+    //     const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+        
+    //     const result = notes.map((note, index) => {
+    //         return <p key={index} onClick={() => remItem(index)}>
+    //             {note}
+    //         </p>;
+    //     });
+        
+    //     function remItem(index) {
+    //         setNotes([...notes.slice(0, index), ...notes.slice(index + 1)]);
+    //     }
+        
+    //     return <div>
+    //         {result}
+    //     </div>;
+    // }
+
+
+// 1
+    // const notes = ['a', 'b', 'c', 'd', 'e'];
+// Выведите элементы этого массива в виде списка ul. Сделайте так, чтобы в конце каждой li стояла кнопка для ее удаления.
+// function App(){
+//     const[notes, setNotes] = useState([1,2,3]);
+
+//     function removeLi(index){
+//         setNotes([...notes.slice(0, index), ...notes.slice(index + 1)]);
+//     }
+
+//     let result = notes.map((note, index) =>{
+//     return <ul>
+//     <li key={index}>{note}</li>
+//     <button onClick={() =>removeLi(index)}>clear</button>
+//     </ul>
+
+// })
+// return <div>
+// {result}
+// </div>;
+// }
+
+// summ
+function getSum(arr) {
+	let sum = 0;
+	
+	for (const elem of arr) {
+		sum += +elem;
+	}
+	
+	return sum;
+}
+
+
+// function App() {
+// 	const [notes, setNotes] = useState([1, 2, 3]);
+	
+// 	return <div>
+// 		<input value={notes[0]} />
+// 		<input value={notes[1]} />
+// 		<input value={notes[2]} />
+		
+// 		{getSum(notes)}
+// 	</div>;
+// }
+
+//////////////////////////////////
+// function App() {
+// 	const [notes, setNotes] = useState([1, 2, 3]);
+	
+// 	function changeHandler(index, event) {
+// 		setNotes([...notes.slice(0, index), event.target.value, ...notes.slice(index + 1)]);
+// 	}
+	
+// 	return <div>
+// 		<input value={notes[0]} onChange={event => changeHandler(0, event)} />
+// 		<input value={notes[1]} onChange={event => changeHandler(1, event)} />
+// 		<input value={notes[2]} onChange={event => changeHandler(2, event)} />
+		
+// 		{getSum(notes)}
+// 	</div>;
+// }
+
+// или:
+//сумма значений в инпутах
+function App() {
+	const [notes, setNotes] = useState([1, 2, 3]);
+	
+	const result = notes.map((note, index) => {
+		return <input
+			key={index}
+			value={note}
+			onChange={event => changeHandler(index, event)}
+		/>;
+
+        
+	function changeHandler(index, event) {
+		setNotes([...notes.slice(0, index), event.target.value, ...notes.slice(index + 1)]);
+	}
+	});
+	
+	return <div>
+		{result}
+		{getSum(notes)}
+	</div>;
+}
