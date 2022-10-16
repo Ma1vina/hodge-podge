@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+
+    <script>
+       let root = document.querySelector("#root") 
+
+   function fetchX(url){
+ return fetch(url).then((result) => result.json())
+   }
+
+function one(){
+    fetchX("https://reqres.in/api/users?page=2").then((res)=> res.data)
+    .then((result)=>{
+    [...result].forEach((elem, i) =>{
+        let p = document.createElement("p");
+        p.innerHTML =  i+1 + ". " + elem.first_name + " " + elem.last_name;
+        root.append(p)
+    })
+    })
+}
+one()
+
+
+
+        // fetch("https://reqres.in/api/users?page=2")
+        // .then((result)=>result.json())
+        // .then((v) =>v.data)
+        // .then((x)=>x.forEach(elem => {
+        //     console.log(elem.avatar);
+        // }));
+    </script>
+    
+</body>
+</html>
