@@ -304,28 +304,99 @@
 // console.log(employee instanceof Employee);
 
 
-class Student {
-	constructor(name) {
-		this.name = name;
-	}
-}
-class Employee {
-	constructor(name) {
-		this.name = name;
-	}
-}
+// class Student {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// }
+// class Employee {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// }
 
-let users = [
-	new Student('user1'),
-	new Employee('user2'),
-	new Student('user3'),
-	new Employee('user4'),
-	new Student('user5'),
-	new Employee('user6'),
-	new Student('user7'),
-];
-for(let elem of users){
-	console.log(elem.name);
-}
+// let users = [
+// 	new Student('user1'),
+// 	new Employee('user2'),
+// 	new Student('user3'),
+// 	new Employee('user4'),
+// 	new Student('user5'),
+// 	new Employee('user6'),
+// 	new Student('user7'),
+// ];
+// for(let elem of users){
+// 	console.log(elem.name);
+// }
 // Переберите циклом массив объектов и выведите в консоль только имена работников.
 
+
+// ============
+// let date = new Date;
+// console.dir(date)
+
+// ===========
+// let reg = new RegExp;
+
+// console.log(reg);
+// console.dir(reg);
+
+// console.log(reg instanceof RegExp);
+
+// ==========
+// Наследование
+
+// class User {
+// 	setName(name) {
+// 		this.name = name;
+// 	}
+// 	getName() {
+// 		return this.name;
+// 	}
+// }
+
+// class Student extends User {
+// 	setYear(year) {
+// 		this.year = year;
+// 	}
+// 	getYear() {
+// 		return this.year;
+// 	}
+// }
+
+// let student = new Student;
+
+// student.setName('john');
+// student.setYear(1);
+
+// student.getName();
+// student.getYear();
+
+// console.log(student.getName(), student.getYear());
+// ==============
+
+
+//переопределение метода. SUPER
+
+class User {
+	setName(name) {
+		this.name = name;
+	}
+	getName() {
+		return this.name;
+	}
+}
+
+
+class Student extends User {
+	setName(name) {
+		if (name.length > 0) {
+			super.setName(name); // метод родителя
+		} else {
+			throw new Error('student name error');
+		}
+	}
+}
+
+let garry = new Student;
+garry.setName("Garry");
+console.log(garry.getName());
