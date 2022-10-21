@@ -377,26 +377,48 @@
 
 //переопределение метода. SUPER
 
+// class User {
+// 	setName(name) {
+// 		this.name = name;
+// 	}
+// 	getName() {
+// 		return this.name;
+// 	}
+// }
+
+
+// class Student extends User {
+// 	setName(name) {
+// 		if (name.length > 0) {
+// 			super.setName(name); // метод родителя
+// 		} else {
+// 			throw new Error('student name error');
+// 		}
+// 	}
+// }
+
+// let garry = new Student;
+// garry.setName("Garry");
+// console.log(garry.getName());
+
+// проблема приватного свойства
 class User {
-	setName(name) {
-		this.name = name;
+	#age=3;
+	setAge(age) {
+		this.#age = age;
 	}
-	getName() {
-		return this.name;
+	getAge() {
+		return this.#age;
 	}
 }
-
 
 class Student extends User {
-	setName(name) {
-		if (name.length > 0) {
-			super.setName(name); // метод родителя
-		} else {
-			throw new Error('student name error');
-		}
+	incAge() {
+		let age = this.getAge()
+		++age;
+		this.setAge(age);
 	}
-}
 
-let garry = new Student;
-garry.setName("Garry");
-console.log(garry.getName());
+   
+
+}
