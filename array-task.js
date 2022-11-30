@@ -85,9 +85,42 @@ for (let i = 0; i < arr.length; i++) {
     }
   }
 }
+
 let filteredArray = newarr.filter(function(v, i){
-    return newarr.indexOf(v) == i; 
+    return newarr.indexOf(v) == i;
   });
-  
+
   console.log(filteredArray);
 
+// let arr = [2, 8, 1, 8, 2, 4, 1, 8, 9, 2];
+// let newArr = [];
+// for (let i = 0; i < arr.length; i++) {
+//   let result = getNumb(newArr, arr[i]);
+//   if (result) {
+//     continue;
+//   }
+//   let res = ElemIndex(arr, i)
+//   if(res){
+//     newArr.push(arr[i])
+//   }
+// }
+//  console.log(newArr);
+
+
+// function getNumb(arr, numb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == numb) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// function ElemIndex(arr, index) {
+//   for (let i = index + 1; i < arr.length; i++) {
+//     if (arr[index] == arr[i]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
