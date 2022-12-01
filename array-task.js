@@ -2,7 +2,6 @@
 //  Пример: если изначальный массив - [2, 8, 1, 4],
 //   то результат будет [2, 10, 11, 15]
 // let arr = [2, 8, 1, 4];
-
 //1.
 // function getSums(arr) {
 //     let result = [];
@@ -17,6 +16,7 @@
 //   console.log(getSums(arr));
 
 // 2.
+// let arr = [2, 8, 1, 4];
 //   const getSums = (arr) => {
 //     return arr.reduce((acc, v, index, arr) => {
 //     if (index === 0) {
@@ -24,7 +24,6 @@
 //     } else {
 //     acc.push(v + acc[index - 1]);
 //     }
-
 //     return acc;
 //     }, []);
 //     }
@@ -76,23 +75,25 @@
 //  то ответ будет - [8, 2].
 //  Пример2: если изначальный массив - [4, 7, 1, 15], то ответ будет - [].
 
-let arr = [2, 8, 1, 8, 2, 4,1, 8, 9, 2];
-let newarr = [];
-for (let i = 0; i < arr.length; i++) {
-  for (let j = i; j < arr.length; j++) {
-    if (arr[i] == arr[j + 1] && arr[j + 1] !== undefined) {
-      newarr.push(arr[i]);
-    }
-  }
-}
+//1. let arr = [2, 8, 1, 8, 2, 4,1, 8, 9, 2];
+// let newarr = [];
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i; j < arr.length; j++) {
+//     if (arr[i] == arr[j + 1] && arr[j + 1] !== undefined) {
+//       newarr.push(arr[i]);
+//     }
+//   }
+// }
 
-let filteredArray = newarr.filter(function(v, i){
-    return newarr.indexOf(v) == i;
-  });
+// let filteredArray = newarr.filter(function(v, i){
+//     return newarr.indexOf(v) == i;
+//   });
 
-  console.log(filteredArray);
+//   console.log(filteredArray);
 
-// let arr = [2, 8, 1, 8, 2, 4, 1, 8, 9, 2];
+
+
+//2.  let arr = [2, 8, 1, 8];
 // let newArr = [];
 // for (let i = 0; i < arr.length; i++) {
 //   let result = getNumb(newArr, arr[i]);
@@ -124,3 +125,40 @@ let filteredArray = newarr.filter(function(v, i){
 //   }
 //   return false;
 // }
+
+
+// Переведите текст вида "border-left-width в borderLeftWidth"
+// Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+// То есть дефисы удаляются, а все слова после них получают заглавную букву.
+
+// Примеры:
+// camelize("background-color") == 'backgroundColor';
+
+let text = "border-left-width";
+
+// 1.
+//  function camelize(str){
+// let arrText = str.split("-")
+// let newArr = []
+// for(let i=0; i<arrText.length;i++){
+//     if(i == 0){
+//         newArr.push(arrText[i])
+//     }else{
+// newArr.push(arrText[i][0].toUpperCase() + arrText[i].slice(1));
+// }
+// }
+// let newText = newArr.join("") 
+// return newText;
+// }
+// console.log(camelize(text));
+
+
+// 2. 
+// function camelize(str) {
+//     return str
+//       .split('-') 
+//       .map((word, index) =>
+//        index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+//       )
+//       .join(''); // соединяет ['my', 'Long', 'Word'] в 'myLongWord'
+//   }
