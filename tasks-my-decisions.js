@@ -46,14 +46,29 @@
 // console.log(user.admin);
 //
 
-function MyArray() { }
-MyArray.prototype = [];
+// function MyArray() { }
+// MyArray.prototype = [];
 
-let arr = new MyArray();
-arr.push(1, 2, 3);
-console.log(arr.length);
+// let arr = new MyArray();
+// arr.push(1, 2, 3);
+// console.log(arr.length);
+
+// [].push(1,2).unshift(3).join()
 
 
-[].push(1,2).unshift(3).join()
 
+   //палиндром       
+    let str = "мадам"
+    function getPalind(str){
+            let arr = str.split('');
+            let arr2 = str.split('').reverse();
 
+    	for(let i = 0; i < arr.length; i++) {
+    		if(arr[i]!== arr2[i]) { 
+    			return false;
+    		}else{
+                return true;
+            }
+      	}
+    }
+    console.log(getPalind(str));
