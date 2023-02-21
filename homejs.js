@@ -25,8 +25,8 @@
 //   let x = new HashTable(5);
 //   console.log(x.hashFunction("hey"));
 
-// let arr = [2,4,5,3];
-// arr.sort((a,b)=>{
-//   return 1;
-// })
-// console.log(arr);
+let arr = [2,4,5,3];
+arr.sort((a,b)=>{
+  return 1;
+})
+console.log(arr);
