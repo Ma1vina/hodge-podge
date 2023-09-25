@@ -1,0 +1,56 @@
+html{
+background-color: lightblue;
+}
+
+h1{
+	text-align: center;
+	border-bottom: 1px solid white;
+	padding: 20px;
+	color: white;
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.box-menu{
+	display: block;
+	border-right: 1px solid white;
+	height: 1000px;
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+	font-weight: 600;
+}
+
+#content{
+margin-left: 100px;
+}
+
+#root{
+	display: flex;
+}
+
+.box-content{
+	text-align: center;
+	color: navy;
+	flex-grow: 1;
+}
+
+#pagination {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.pag-btn-style{
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: azure;
+	font-size: 20px;
+	text-align: center;
+}
+
+.item-style{
+	border-bottom: 1px solid white;
+	padding: 15px;
+}

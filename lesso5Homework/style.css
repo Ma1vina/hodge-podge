@@ -1,0 +1,99 @@
+body{
+  background-color:#f4a460; 
+
+}
+.root {
+  text-align: center;
+  color: white;
+}
+
+h1{
+  color:white;
+}
+.box-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:brown;
+  background-image:url(images/cars.png);
+  background-size:cover;
+}
+
+#btn-continue, .btn-save, .btn-save-riv{
+  margin: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  border-color: brown;
+  background-color:beige;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: brown;
+   border-radius: 10px;
+}
+
+.select-car{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.tuning label{
+  display: flex;
+  text-align: start;
+  margin-left: 28%;
+  font-size: 22px;
+  }
+
+  .tuning h3{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+.hidden {
+  visibility: hidden;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.table_heads {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.table_heads div {
+  padding-left: 30px;
+  flex-basis: 20%;
+}
+
+.table_list {
+  display: flex;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.table_list div {
+  padding-left: 30px;
+  flex-basis: 20%;
+}
+
+.rivals label{
+  font-size: 30px;
+}
+
+.rivals input, .tuning input{
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: brown;
+  border-radius: 10px;
+  border-color:brown;
+  margin: 15px;
+}

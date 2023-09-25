@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <div class="box-header">
+    <h1>Race for survival</h1>
+    <br/>
+  </div>
+  <hr></hr>
+    <div class="root">
+      <div class="select-car">
+        <h3>Выбор автомобиля</h3>
+        <label> <input type="radio" name="choose-car" checked id="civil" value="Гражданская"> Гражданский</label>
+        <label> <input type="radio" name="choose-car" checked id="sport" value="Спортивная">Спортивный</label>
+        <label> <input type="radio" name="choose-car" checked id="military" value="Военная">Военный</label>
+        <br/>
+        <button id="btn-continue">Продолжить!</button>
+         </div>
+      <div class="tuning hidden">
+        <h3>У вас есть 2 очка  для улучшения параметров</h3>
+
+        <label for="fuel">Объем дополнительного топливного бака: </label>
+        <input type="number" name="fuel" id="fuel" min="0"/><hr width="600px"/> <br/>
+        <label for="lowFuelConsumption">Оптимизация расхода топлива: </label>
+        <input type="number" name="lowFuelConsumption" id="lowFuelConsumption" min="0" /><hr width="600px"/><br/>
+        <label for="durability">Прочность : </label>
+        <input type="number" name="durability" id="durability" min="0" /><hr width="600px"/><br/>
+        <label for="speed">Скорость: </label>
+        <input type="number" name="speed" id="speed" min="0" /><hr width="600px"/><br/>
+        <br />
+        <br />
+        <label for="power_reserve">Запас хода: </label>
+        <input type="text" name="power_reserve" id="power_reserve" disabled />
+         <br />
+        <br />
+        <button class="btn-save">Сохранить</button>
+      </div>
+      <div class="rivals hidden">
+        <label for="quantity_riv">Выберите количество соперников: </label><br/>
+        <input type="number" value="1" name="quantity_riv" id="quantity_riv" min="1" max="5" />
+        <br />
+        <br />
+        <button class="btn-save-riv">Сохранить</button>
+      </div>
+      <div class="table hidden">
+        <div class="table_heads">
+          <div>Имя</div>
+          <div>Запас хода</div>
+          <div>Прочность</div>
+          <div>Скорость</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
